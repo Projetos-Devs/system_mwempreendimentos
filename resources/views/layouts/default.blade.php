@@ -28,11 +28,11 @@
 
     <nav class="navbar navbar-expand-lg mb-5">
         <div class="container">
-            <a href="/"><img src="/images/layout/logo_white.png" height="30" alt="MWEmpreendimentos"></a>
+            <a href="{{route('home.index')}}"><img src="/images/layout/logo_white.png" height="30" alt="MWEmpreendimentos"></a>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item px-3">
-                        <a class="nav-link text-white" href="">Home</a>
+                        <a class="nav-link text-white" href="{{route('home.index')}}">Home</a>
                     </li>
                     <li class="nav-item px-3 dropdown">
                         <a class="nav-link text-white" href="">Serviços</a>
@@ -45,7 +45,7 @@
                         <a class="nav-link text-white" href="">Sobre</a>
                     </li>
                     <li class="nav-item" style="margin-left: 350px;">
-                        <a class="nav-link text-white" href="">Entrar</a>
+                        <a class="nav-link text-white" href="{{route('login.index')}}">Entrar</a>
                     </li>
                     <li class="nav-item px-2">
                         <a class="nav-link text-white border border-2 border-white rounded-3 pb-0 pt-0 mt-2" href="">Inscrever-se</a>
