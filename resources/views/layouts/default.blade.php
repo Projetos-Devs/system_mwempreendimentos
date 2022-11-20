@@ -48,7 +48,7 @@
                         <a class="nav-link text-white" href="{{route('login.index')}}">Entrar</a>
                     </li>
                     <li class="nav-item px-2">
-                        <a class="nav-link text-white border border-2 border-white rounded-3 pb-0 pt-0 mt-2" href="">Inscrever-se</a>
+                        <a class="nav-link text-white border border-2 border-white rounded-3 pb-0 pt-0 mt-2" href="{{route('usuario.create')}}">Inscrever-se</a>
                     </li>
                 </ul>
             </div>
