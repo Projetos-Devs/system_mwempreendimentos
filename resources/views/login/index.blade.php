@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>MWEmpreendimentos</title>
-    <link rel="icon" href="/images/layout/icon.png">
+    <title>Empreendimentos</title>
+    <link rel="icon" href="/images/icon.png">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/icons/bootstrap-icons.css ">
 
@@ -24,17 +24,14 @@
 
 <body>
 
-
     <div class="container" style="max-width: 250px;">
 
         <img class="img-fluid mt-5" src="images/logo_white.png">
 
     </div>
 
-
     <div class="container pb-3 px-4 text-white rounded-4 shadow-lg"
         style=" width: 400px; margin-top: 30px; background-color: #2D2D3C;">
-
 
         <form action="">
 

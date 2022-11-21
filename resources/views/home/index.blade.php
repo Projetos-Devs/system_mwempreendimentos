@@ -1,6 +1,6 @@
 @extends('layouts.default')
 
-@section('title', 'MWEmpreendimentos')
+@section('title', 'Empreendimentos')
 
 @section('conteudo')
 <h1>Bem Vindo ao<br>

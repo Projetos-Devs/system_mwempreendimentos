@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>MWEmpreendimentos</title>
-    <link rel="icon" href="/images/layout/icon.png">
+    <title>Empreendimentos</title>
+    <link rel="icon" href="/images/icon.png">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/icons/bootstrap-icons.css ">
     <style>
@@ -24,7 +24,7 @@
 
     </div>
     <div class="container rounded-4" style="background-color: #2D2D3C; width: 750px; margin-top: 30px;">
-        <h1 class="text-white p-0 m-0 pt-2" style="text-align: center">Cadastro</h1>
+        <h2 class="text-white p-0 m-0 pt-3" style="text-align: center">Cadastro</h2>
         <h2 class="text-white p-0 m-0 pb-1" style="text-align: center; font-size: 1rem;">__________________________________________________________________________________________________________</h2>
 
     <form class="row g-4" style="margin: 0 auto;">
@@ -36,8 +36,8 @@
         </div>
 
         <div class="form-group col-6">
-            <label for="password" class="form-label fs-5 fs-5 text-white">Senha</label>
-            <input type="text" class="form-control form-control-lg bg-light" id="password" name="password" required>
+            <label for="senha" class="form-label fs-5 fs-5 text-white">Senha</label>
+            <input type="password" class="form-control form-control-lg bg-light" id="password" name="senha" required>
         </div>
 
         <div class="form-group col-6">
@@ -46,8 +46,8 @@
         </div>
     
         <div class="form-group col-6">
-            <label for="password" class="form-label fs-5 fs-5 text-white">Confima Senha</label>
-            <input type="text" class="form-control form-control-lg bg-light" id="password" name="password" required>
+            <label for="senha" class="form-label fs-5 fs-5 text-white">Confirmar Senha</label>
+            <input type="password" class="form-control form-control-lg bg-light" id="password" name="senha" required>
         </div>
     </form>
         <div class="py-4">
