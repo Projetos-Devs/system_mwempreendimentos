@@ -3,6 +3,7 @@
 use App\Http\Controllers\ContatoController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\OrcamentoController;
 use App\Http\Controllers\UsuarioController;
 use Illuminate\Support\Facades\Route;
 
@@ -35,3 +36,6 @@ Route::get('usuarios/create', [UsuarioController::class, 'create'])->name('usuar
 
 //ROTAS DE CONTATO
 Route::get('/contato', [ContatoController::class, 'index'])->name('contato.index');
+
+//ROTASA DE ORÇAMENTO
+Route::get('/orcamento', [OrcamentoController::class, 'index'])->name('orcamento.index');
