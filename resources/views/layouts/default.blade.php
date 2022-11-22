@@ -38,7 +38,7 @@
 
                     </li>
                     <li class="nav-item px-3">
-                        <a class="nav-link text-white" href="">Contatos</a>
+                        <a class="nav-link text-white" href="{{route('contato.index')}}">Contatos</a>
                     </li>
                     <li class="nav-item px-3">
                         <a class="nav-link text-white" href="">Sobre</a>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContatoController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UsuarioController;
@@ -31,3 +32,6 @@ Route::get('/login', [LoginController::class, 'index'])->name('login.index');
 
 //ROTAS DE USUARIO
 Route::get('usuarios/create', [UsuarioController::class, 'create'])->name('usuario.create');
+
+//ROTAS DE CONTATO
+Route::get('/contato', [ContatoController::class, 'index'])->name('contato.index');
