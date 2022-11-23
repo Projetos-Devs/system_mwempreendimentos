@@ -8,6 +8,11 @@ class LoginController extends Controller
 {
     public function index(Request $request)
     {
-        return view('login.index');
+        return view('admin.index');
+    }
+
+    public function create(Request $request)
+    {
+        return view('admin.create');
     }
 }

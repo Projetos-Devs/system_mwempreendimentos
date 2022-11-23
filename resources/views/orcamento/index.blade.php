@@ -1,14 +1,19 @@
 @extends('layouts.default')
 
-@section('title', 'Orçamento')
+@section('title', 'Empreendimentos')
 
 @section('conteudo')
-<div class="container" style="">
-    <img class="img-fluid" style="width: 1400px;" src="/images/banner_orcamento.png">
+
+
+<div class="">
+    <img class="img-fluid" style="width: 100%; margin-top: -50px;" src="/images/banner_orcamento.png">
 </div>
 
-<div class="container text-white rounded-4 shadow-lg p-1 m-2" style="background-color: #2D2D3C; text-align: center;">
-    <h2>Fale conosco</h2>
+
+<div class="container">
+
+<div class="text-white rounded-4 shadow-lg p-1 m-2 mt-4 mb-4" style="background-color: #2D2D3C; text-align: center;">
+    <h2>Orçamento</h2>
 </div>
 
 <div class="container text-white rounded-4 shadow-lg p-1 m-2" style="background-color: #2D2D3C;  margin-top: 30px;">
@@ -96,5 +101,7 @@
     <div class="py-4">
         <button type="submit" class="btn  btn-lg" style="width: 220px; margin-left: 450px; background-color: #5EB7CB">Confirmar</button>
 </div>
+</div>
+
 </div>
 @endsection

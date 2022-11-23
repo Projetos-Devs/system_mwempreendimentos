@@ -50,7 +50,7 @@
 
             <div>
                 <button type="submit" class="btn btn-success btn-lg align-middle" style="width: 220px; margin-left: 65px; ">Entrar</button>
-                <p style="margin-left: 65px;">Não possui conta? <a class="text-info text-decoration-none" href="{{ route('usuario.create')}}">Cadastre-se</a></p>
+                <p style="margin-left: 65px;">Não possui conta? <a class="text-info text-decoration-none" href="{{ route('admin.create')}}">Cadastre-se</a></p>
             </div>
 
         </form>

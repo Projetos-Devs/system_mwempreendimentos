@@ -29,10 +29,12 @@ Route::get('/', [HomeController::class, 'index'])->name('home.index');
 
 
 //ROTAS DE LOGIN
-Route::get('/login', [LoginController::class, 'index'])->name('login.index');
+Route::get('/admin', [LoginController::class, 'index'])->name('admin.index');
+
+Route::get('/admin/create', [LoginController::class, 'create'])->name('admin.create');
 
 //ROTAS DE USUARIO
-Route::get('usuarios/create', [UsuarioController::class, 'create'])->name('usuario.create');
+
 
 //ROTAS DE CONTATO
 Route::get('/contato', [ContatoController::class, 'index'])->name('contato.index');
