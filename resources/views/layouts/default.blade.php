@@ -54,7 +54,7 @@
                         <a class="nav-link text-white" href="{{ route('contato.index') }}">Contato</a>
                     </li>
                     <li class="nav-item px-3">
-                        <a class="nav-link text-white" href="{{ route('contato.index') }}">Ajuda</a>
+                        <a class="nav-link text-white" href="">Ajuda</a>
                     </li>
 
 

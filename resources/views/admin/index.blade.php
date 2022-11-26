@@ -30,7 +30,7 @@
 
     </div>
 
-    <div class="container pb-3 px-4 text-white rounded-4 shadow-lg"
+    <div class="container pb-5 px-4 text-white rounded-4 shadow-lg"
         style=" width: 400px; margin-top: 30px; background-color: #2D2D3C;">
 
         <form action="">
@@ -50,7 +50,6 @@
 
             <div>
                 <button type="submit" class="btn btn-success btn-lg align-middle" style="width: 220px; margin-left: 65px; ">Entrar</button>
-                <p style="margin-left: 65px;">Não possui conta? <a class="text-info text-decoration-none" href="{{ route('admin.create')}}">Cadastre-se</a></p>
             </div>
 
         </form>
