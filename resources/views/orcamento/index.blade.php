@@ -4,104 +4,93 @@
 
 @section('conteudo')
 
+    <div style="position:relative;">
+        <img class="w-100" style="height: 370px; margin-top: -50px; object-fit: cover; filter: brightness(55%);"
+            src="/images/orcamento.jpg">
 
-<div class="">
-    <img class="img-fluid" style="width: 100%; margin-top: -50px;" src="/images/banner_orcamento.png">
-</div>
+        <div class="container ">
+            <h1 class="text-white" style="position: relative; top: -150px; left: 40px; font-size:3.5em">Orçamento</h1>
+            <p class="text-white" style="position: relative; top: -155px; left: 40px;">Faça seu orçamento agora !</p>
+        </div>
+    </div>
 
+    <div class="container" style="margin-top: -60px">
 
-<div class="container">
-
-<div class="text-white rounded-4 shadow-lg p-1 m-2 mt-4 mb-4" style="background-color: #2D2D3C; text-align: center;">
-    <h2>Orçamento</h2>
-</div>
-
-<div class="container text-white rounded-4 shadow-lg p-1 m-2" style="background-color: #2D2D3C;  margin-top: 30px;">
-    
-    <form class="row g-2 p-3">
-
-        <div class="form-group col-6">
-            <label for="tipo">Tipo do evento</label>
-            <select class="form-select" id="tipo" name="tipo" required>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-            </select>
+        <div class="text-white rounded-4 shadow-lg p-1 m-2 mt-4 mb-4"
+            style="background-color: #2D2D3C; text-align: center;">
+            <h2>Orçamento</h2>
         </div>
 
-        <div class="form-group col-6">
-            <label for="proficao">Você é?</label>
-            <select class="form-select" id="proficao" name="proficao" required>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-            </select>
+        <div class="container text-white rounded-4 shadow-lg p-1 m-2" style="background-color: #2D2D3C;  margin-top: 30px;">
+
+            <form method="POST" action="{{route('orcamento.store')}}" enctype="multipart/form-data">
+
+                 @csrf
+                 <input type="hidden" value="1" name="id_user">
+                 <input type="hidden" value="NULL" name="data_registro">
+                 <input type="hidden" value="andamento" name="status">
+                <div class="row">
+                <div class="form-group col-6">
+                    <label for="tipo_evento">Tipo do evento</label>
+                    <input type="text" class="form-control" name="tipo_evento" id="tipo" required>
+                </div>
+
+                <div class="form-group col-6">
+                    <label for="data_inicio">Data de início do evento</label>
+                    <input type="date" class="form-control" name="data_inicio" id="data_in" required>
+                </div>
+
+                <div class="form-group col-6">
+                    <label for="data_fim">Data de término do evento</label>
+                    <input type="date" class="form-control" name="data_fim" id="data_fim" required>
+                </div>
+
+                <div class="form-group col-6">
+                    <label for="endereco">Endereço</label>
+                    <input name="endereco" id="endereco" type="text" class="form-control" required>
+                </div>
+
+
+                <div class="form-group col-6">
+                    <label for="id_municipio">Cidade</label>
+                    <select class="form-select" name="id_municipio" value="" required>
+                        <option value="">--</option>
+                        @foreach ($municipios as $municipio)
+                            <option value="{{ $municipio->id_municipio }}">{{ $municipio->nome }}</option>
+                        @endforeach
+                    </select>
+                </div>
+
+                <div class="form-group col-6">
+                    <label for="id_uf">Estado</label>
+                    <select class="form-select" id="estado" name="id_uf" required>
+                        <option value="">--</option>
+                        @foreach ($ufs as $uf)
+                            <option value="{{ $uf->id_uf }}">{{ $uf->sigla }}</option>
+                        @endforeach
+                    </select>
+                </div>
+
+
+            </div>
+
+                
+                <!--<div class="form-group">
+                    <input class="form-check-input" type="checkbox" value="" id="tenda" name="tenda">
+                    <label class="form-check-label" for="tenda">Tenda</label>
+                </div>
+
+                <div class="form-group">
+                    <input class="form-check-input" type="checkbox" value="" id="tenda" name="tenda">
+                    <label class="form-check-label" for="tenda">Palco</label>
+                </div>-->
+
+            <div class="py-4">
+                <button type="submit" class="btn  btn-lg"
+                    style="width: 220px; margin-left: 450px; background-color: #5EB7CB">Confirmar</button>
+            </div>
+        </form>
         </div>
 
-        <div class="form-group col-6">
-            <label for="data_in">Data de início do evento</label>
-            <input type="date" class="form-control" name="data_in" id="data_in" required>
-        </div>
-
-        <div class="form-group col-6">
-            <label for="nome_em">Nome da empresa</label>
-            <input type="text" class="form-control" name="nome_em" id="nome_em" required>
-        </div>
-
-        <div class="form-group col-6">
-            <label for="data_fim">Data de término do evento</label>
-            <input type="date" class="form-control" name="data_fim" id="data_fim" required>
-        </div>
-
-        <div class="form-group col-6">
-            <label for="nome_resp">Nome do responsável</label>
-            <input type="text" class="form-control" name="nome_resp" id="nome_resp" required>
-        </div>
-
-        <div class="form-group col-6">
-            <label for="cidade">Cidade</label>
-            <input type="text" class="form-control" name="cidade" id="cidade" required>
-        </div>
-
-        <div class="form-group col-6">
-            <label for="email">Email</label>
-            <input name="email" id="email" type="email" class="form-control" required>
-        </div>
-
-        <div class="form-group col-6">
-            <label for="estado">Estado</label>
-            <select class="form-select" id="estado" name="estado" required>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-            </select>
-        </div>
-
-        <div class="form-group col-6">
-            <label for="telefone">Telefone</label>
-            <input type="text" class="form-control" placeholder="(DDD)XXXXX-XXXX" name="telefone" id="telefone" required>
-        </div>
-
-        <div class="form-group p-2">
-            <label class="rounded" for=""> Envie o projeto do seu evento</label>
-            <input type="file" class="form-control-file rounded form-control" name="foto" id="foto">
-        </div>
-
-        <div class="form-group">
-            <input class="form-check-input" type="checkbox" value="tenda" id="tenda" name="tenda">
-            <label class="form-check-label" for="tenda">Tenda</label>
-        </div>
-
-        <div class="form-group">
-            <input class="form-check-input" type="checkbox" value="tenda" id="tenda" name="tenda">
-            <label class="form-check-label" for="tenda">Palco</label>
-          </div>
-
-    </form>
-    <div class="py-4">
-        <button type="submit" class="btn  btn-lg" style="width: 220px; margin-left: 450px; background-color: #5EB7CB">Confirmar</button>
-</div>
-</div>
-
-</div>
+    </div>
 @endsection

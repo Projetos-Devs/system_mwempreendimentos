@@ -39,5 +39,7 @@ Route::get('/admin/create', [LoginController::class, 'create'])->name('admin.cre
 //ROTAS DE CONTATO
 Route::get('/contato', [ContatoController::class, 'index'])->name('contato.index');
 
-//ROTASA DE ORÇAMENTO
+//ROTAS DE ORÇAMENTO
 Route::get('/orcamento', [OrcamentoController::class, 'index'])->name('orcamento.index');
+
+Route::post('/orcamento', [OrcamentoController::class, 'store'])->name('orcamento.store');
