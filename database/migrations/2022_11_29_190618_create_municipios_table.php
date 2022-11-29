@@ -13,11 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('ufs', function (Blueprint $table) {
+        Schema::create('municipios', function (Blueprint $table) {
             $table->id();
-            $table->enum('sigla', ['AL','BA','SE']);
             $table->string('nome');
-            
+
+            $table->unsignedBigInteger('id_uf');
+            $table->foreign('id_uf')->references('id')->on('ufs')
+                ->onUpdate('restrict')->onDelete('restrict');
+
             $table->timestamps();
         });
     }
@@ -29,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ufs');
+        Schema::dropIfExists('municipios');
     }
 };

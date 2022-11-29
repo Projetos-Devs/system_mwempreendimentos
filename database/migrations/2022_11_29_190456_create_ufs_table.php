@@ -13,14 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('clientes', function (Blueprint $table) {
+        Schema::create('ufs', function (Blueprint $table) {
             $table->id();
+            $table->enum('sigla', ['AL','BA','SE']);
             $table->string('nome');
-            $table->string('endereco');
-            $table->string('email');
-            $table->string('telefone');
-            $table->string('cpf');
-            $table->string('cnpj');
+
             
             $table->timestamps();
         });
@@ -33,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('clientes');
+        Schema::dropIfExists('ufs');
     }
 };

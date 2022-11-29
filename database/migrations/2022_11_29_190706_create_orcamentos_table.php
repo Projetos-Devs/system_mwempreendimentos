@@ -21,28 +21,25 @@ return new class extends Migration
             $table->date('data_fim');
             $table->enum('status', ['andamento', 'finalizado', 'cancelado']);
 
-
-                $table->unsignedBigInteger('id_uf');
+            $table->unsignedBigInteger('id_uf');
             $table->foreign('id_uf')->references('id')->on('ufs')
                 ->onUpdate('restrict')->onDelete('restrict');
 
-                $table->unsignedBigInteger('id_municipio');
+            $table->unsignedBigInteger('id_municipio');
             $table->foreign('id_municipio')->references('id')->on('municipios')
-                ->onUpdate('restrict')->onDelete('restrict');
-
-                $table->unsignedBigInteger('id_cliente');
-            $table->foreign('id_cliente')->references('id')->on('clientes')
                 ->onUpdate('restrict')->onDelete('restrict');
 
                 $table->unsignedBigInteger('id_produto');
             $table->foreign('id_produto')->references('id')->on('produtos')
                 ->onUpdate('restrict')->onDelete('restrict');
-
-
-                $table->unsignedBigInteger('id_user');
-            $table->foreign('id_user')->references('id')->on('users')
+                
+            $table->unsignedBigInteger('id_cliente');
+            $table->foreign('id_cliente')->references('id')->on('clientes')
                 ->onUpdate('restrict')->onDelete('restrict');
 
+            $table->unsignedBigInteger('id_user');
+            $table->foreign('id_user')->references('id')->on('users')
+                ->onUpdate('restrict')->onDelete('restrict');
 
 
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cliente;
+use App\Models\Produto;
 use App\Models\Municipio;
 use App\Models\Orcamento;
 use App\Models\Uf;

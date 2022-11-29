@@ -26,8 +26,9 @@
             <form method="POST" action="{{route('orcamento.store')}}" enctype="multipart/form-data">
 
                  @csrf
+                 <input type="hidden" value="1" name="id_cliente">
                  <input type="hidden" value="1" name="id_user">
-                 <input type="hidden" value="NULL" name="data_registro">
+                 <input type="hidden" value="1" name="id_produto">
                  <input type="hidden" value="andamento" name="status">
                 <div class="row">
                 <div class="form-group col-6">
@@ -56,7 +57,7 @@
                     <select class="form-select" name="id_municipio" value="" required>
                         <option value="">--</option>
                         @foreach ($municipios as $municipio)
-                            <option value="{{ $municipio->id_municipio }}">{{ $municipio->nome }}</option>
+                            <option value="{{ $municipio->id }}">{{ $municipio->nome }}</option>
                         @endforeach
                     </select>
                 </div>
@@ -66,12 +67,10 @@
                     <select class="form-select" id="estado" name="id_uf" required>
                         <option value="">--</option>
                         @foreach ($ufs as $uf)
-                            <option value="{{ $uf->id_uf }}">{{ $uf->sigla }}</option>
+                            <option value="{{ $uf->id }}">{{ $uf->sigla }}</option>
                         @endforeach
                     </select>
                 </div>
-
-
             </div>
 
                 

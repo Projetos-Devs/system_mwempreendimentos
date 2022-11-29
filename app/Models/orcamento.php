@@ -12,7 +12,7 @@ class Orcamento extends Model
     protected $fillable = [
 
 
-        'tipo_evento', 'data_inicio', 'endereco', 'status', 'data_fim', 'id_municipio', 'id_uf', 'id_cliente', 'id_user', 'data_registro'
+        'tipo_evento', 'data_inicio', 'endereco', 'status', 'data_fim', 'id_municipio', 'id_uf', 'id_user', 'id_produto', 'id_cliente'
 
 
 
@@ -28,14 +28,20 @@ class Orcamento extends Model
         return $this->belongsTo(uf::class, 'id_uf');
     }
 
-    public function cliente()
-    {
-        return $this->belongsTo(cliente::class, 'id_cliente');
-    }
 
     public function user()
     {
         return $this->belongsTo(User::class, 'id_user');
+    }
+
+    public function produto()
+    {
+        return $this->belongsTo(User::class, 'id_produto');
+    }
+
+    public function cliente()
+    {
+        return $this->belongsTo(User::class, 'id_cliente');
     }
 
 }
