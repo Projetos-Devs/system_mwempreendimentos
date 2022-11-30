@@ -17,7 +17,7 @@ class OrcamentoController extends Controller
         $municipios = Municipio::all()->sortBy('nome');
         $ufs = Uf::all()->sortBy('sigla');
         
-        return view('orcamento.index', compact('municipios', 'ufs'));
+        return view('orcamentos.index', compact('municipios', 'ufs'));
     }
 
 
@@ -28,7 +28,7 @@ class OrcamentoController extends Controller
     
         Orcamento::create($input);
 
-        return redirect()->route('orcamento.index');
+        return redirect()->route('orcamentos.index');
     }
 
 

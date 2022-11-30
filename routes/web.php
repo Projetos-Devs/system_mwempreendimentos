@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\ContatoController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
@@ -37,9 +38,19 @@ Route::get('/admin/create', [LoginController::class, 'create'])->name('admin.cre
 
 
 //ROTAS DE CONTATO
-Route::get('/contato', [ContatoController::class, 'index'])->name('contato.index');
+Route::get('/contatos', [ContatoController::class, 'index'])->name('contatos.index');
 
 //ROTAS DE ORÇAMENTO
-Route::get('/orcamento', [OrcamentoController::class, 'index'])->name('orcamento.index');
+Route::get('/orcamentos', [OrcamentoController::class, 'index'])->name('orcamentos.index');
 
-Route::post('/orcamento', [OrcamentoController::class, 'store'])->name('orcamento.store');
+Route::post('/orcamentos', [OrcamentoController::class, 'store'])->name('orcamentos.store');
+
+
+
+//ROTAS DE CLIENTE
+
+Route::get('/clientes', [ClienteController::class, 'index'])->name('clientes.index');
+
+Route::get('/clientes/create', [ClienteController::class, 'create'])->name('clientes.create');
+
+Route::post('/clientes', [ClienteController::class, 'store'])->name('clientes.store');

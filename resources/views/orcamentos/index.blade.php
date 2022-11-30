@@ -23,7 +23,7 @@
 
         <div class="container text-white rounded-4 shadow-lg p-1 m-2" style="background-color: #2D2D3C;  margin-top: 30px;">
 
-            <form method="POST" action="{{route('orcamento.store')}}" enctype="multipart/form-data">
+            <form method="POST" action="{{route('orcamentos.store')}}" enctype="multipart/form-data">
 
                  @csrf
                  <input type="hidden" value="1" name="id_cliente">
