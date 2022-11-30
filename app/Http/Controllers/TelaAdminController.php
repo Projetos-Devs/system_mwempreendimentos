@@ -18,4 +18,13 @@ class TelaAdminController extends Controller
 
     return view('tela_admin.index', compact('clientes', 'orcamentos', 'totalOrcamentos'));
    }
+
+   public function details()
+   {
+    $clientes = Cliente::all()->sortBy('nome');
+    $orcamentos = Orcamento::all();
+    $totalOrcamentos = Orcamento::all()->count();
+
+    return view('tela_admin.details', compact('clientes', 'orcamentos', 'totalOrcamentos'));
+   }
 }

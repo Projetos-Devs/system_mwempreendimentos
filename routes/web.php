@@ -33,6 +33,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home.index');
 
 //ROTAS DA TELA DE ADMIN
 Route::get('/tela_admin', [TelaAdminController::class, 'index'])->name('tela_admin.index');
+Route::get('/tela_admin/details', [TelaAdminController::class, 'details'])->name('tela_admin.details');
 
 //ROTAS DE LOGIN
 Route::get('/admin', [LoginController::class, 'index'])->name('admin.index');
