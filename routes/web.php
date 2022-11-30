@@ -5,6 +5,9 @@ use App\Http\Controllers\ContatoController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\OrcamentoController;
+use App\Http\Controllers\ProdutosController;
+use App\Http\Controllers\ServicosController;
+use App\Http\Controllers\TelaAdminController;
 use App\Http\Controllers\UsuarioController;
 use Illuminate\Support\Facades\Route;
 
@@ -28,14 +31,17 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home.index');
 
+//ROTAS DA TELA DE ADMIN
+Route::get('/tela_admin', [TelaAdminController::class, 'index'])->name('tela_admin.index');
 
 //ROTAS DE LOGIN
 Route::get('/admin', [LoginController::class, 'index'])->name('admin.index');
 
 Route::get('/admin/create', [LoginController::class, 'create'])->name('admin.create');
 
-//ROTAS DE USUARIO
-
+//Rotas de produtos
+Route::get('/produtos', [ProdutosController::class, 'index'])->name('produtos.index');
+Route::delete('/produtos/{id}', [ProdutosController::class, 'destroy'])->name('produtos.destroy');
 
 //ROTAS DE CONTATO
 Route::get('/contatos', [ContatoController::class, 'index'])->name('contatos.index');

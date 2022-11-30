@@ -9,7 +9,7 @@ class Produto extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['nome', 'descricao', 'quantidade', 'id_user'];
+    protected $fillable = ['nome', 'descricao', 'tipo', 'quantidade_estoque', 'id_user'];
 
 
     public function user()
@@ -17,4 +17,3 @@ class Produto extends Model
         return $this->belongsTo(User::class, 'id_user');
     }
 }
-
