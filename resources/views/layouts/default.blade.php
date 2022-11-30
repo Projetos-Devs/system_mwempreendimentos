@@ -45,7 +45,7 @@
                         <a class="nav-link text-white" href="">Sobre</a>
                     </li>
                     <li class="nav-item px-3 dropdown">
-                        <a class="nav-link text-white" href="">Produtos</a>
+                        <a class="nav-link text-white" href="{{ route('produtos.index')}}">Produtos</a>
                     </li>
                     <li class="nav-item px-3 dropdown">
                         <a class="nav-link text-white" href="{{ route('orcamentos.index') }}">Orçamento</a>

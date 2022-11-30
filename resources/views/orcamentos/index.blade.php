@@ -23,72 +23,86 @@
 
         <div class="container text-white rounded-4 shadow-lg p-1 m-2" style="background-color: #2D2D3C;  margin-top: 30px;">
 
-            <form method="POST" action="{{route('orcamentos.store')}}" enctype="multipart/form-data">
+            <form method="POST" action="{{ route('orcamentos.store') }}" enctype="multipart/form-data">
 
-                 @csrf
-                 <input type="hidden" value="1" name="id_cliente">
-                 <input type="hidden" value="1" name="id_user">
-                 <input type="hidden" value="1" name="id_produto">
-                 <input type="hidden" value="andamento" name="status">
-                <div class="row">
-                <div class="form-group col-6">
-                    <label for="tipo_evento">Tipo do evento</label>
-                    <input type="text" class="form-control" name="tipo_evento" id="tipo" required>
-                </div>
+                @csrf
+                <input type="hidden" value="1" name="id_cliente">
+                <input type="hidden" value="1" name="id_user">
+                <input type="hidden" value="1" name="id_produto">
+                <input type="hidden" value="andamento" name="status">
+                <div class="row m-2">
 
-                <div class="form-group col-6">
-                    <label for="data_inicio">Data de início do evento</label>
-                    <input type="date" class="form-control" name="data_inicio" id="data_in" required>
-                </div>
+                    <div class="form-group col-6">
+                        <label for="tipo_evento">Tipo do Serviço</label>
+                        <input type="text" class="form-control" name="tipo_evento" id="tipo" required>
+                    </div>
 
-                <div class="form-group col-6">
-                    <label for="data_fim">Data de término do evento</label>
-                    <input type="date" class="form-control" name="data_fim" id="data_fim" required>
-                </div>
+                    <div class="form-group col-6">
+                        <label for="endereco">Endereço</label>
+                        <input name="endereco" id="endereco" type="text" class="form-control" required>
+                    </div>
 
-                <div class="form-group col-6">
-                    <label for="endereco">Endereço</label>
-                    <input name="endereco" id="endereco" type="text" class="form-control" required>
-                </div>
+                    <div class="form-group col-6">
+                        <label for="data_inicio">Data de início do evento</label>
+                        <input type="date" class="form-control" name="data_inicio" id="data_in" required>
+                    </div>
+
+                    <div class="form-group col-6">
+                        <label for="data_fim">Data de término do evento</label>
+                        <input type="date" class="form-control" name="data_fim" id="data_fim" required>
+                    </div>
 
 
-                <div class="form-group col-6">
-                    <label for="id_municipio">Cidade</label>
-                    <select class="form-select" name="id_municipio" value="" required>
-                        <option value="">--</option>
-                        @foreach ($municipios as $municipio)
-                            <option value="{{ $municipio->id }}">{{ $municipio->nome }}</option>
-                        @endforeach
-                    </select>
-                </div>
+                    <div class="form-group col-6">
+                        <label for="id_municipio">Cidade</label>
+                        <select class="form-select" name="id_municipio" value="" required>
+                            <option value="">--</option>
+                            @foreach ($municipios as $municipio)
+                                <option value="{{ $municipio->id_uf }}">{{ $municipio->nome }}</option>
+                            @endforeach
+                        </select>
+                    </div>
 
-                <div class="form-group col-6">
-                    <label for="id_uf">Estado</label>
-                    <select class="form-select" id="estado" name="id_uf" required>
-                        <option value="">--</option>
-                        @foreach ($ufs as $uf)
-                            <option value="{{ $uf->id }}">{{ $uf->sigla }}</option>
-                        @endforeach
-                    </select>
-                </div>
-            </div>
+                    <div class="form-group col-6">
+                        <label for="id_uf">Estado</label>
+                        <select class="form-select" id="estado" name="id_uf" required>
+                            <option value="">--</option>
+                            @foreach ($ufs as $uf)
+                                <option value="{{ $uf->id }}">{{ $uf->sigla }}</option>
+                            @endforeach
+                        </select>
+                    </div>
 
-                
-                <!--<div class="form-group">
-                    <input class="form-check-input" type="checkbox" value="" id="tenda" name="tenda">
-                    <label class="form-check-label" for="tenda">Tenda</label>
-                </div>
+                    <div class="form-group col-6 mb-5">
+                        <label for="id_uf">Produtos ou Serviços</label>
+                        <select class="form-select" id="estado" name="id_uf" required>
+                            <option value="">--</option>
+                        </select>
+                    </div>
 
-                <div class="form-group">
-                    <input class="form-check-input" type="checkbox" value="" id="tenda" name="tenda">
-                    <label class="form-check-label" for="tenda">Palco</label>
-                </div>-->
+                    
 
-            <div class="py-4">
-                <button type="submit" class="btn  btn-lg"
-                    style="width: 220px; margin-left: 450px; background-color: #5EB7CB">Confirmar</button>
-            </div>
-        </form>
+                        
+
+                    
+
+
+                    <!--<div class="form-group">
+                                <input class="form-check-input" type="checkbox" value="" id="tenda" name="tenda">
+                                <label class="form-check-label" for="tenda">Tenda</label>
+                            </div>
+
+                            <div class="form-group">
+                                <input class="form-check-input" type="checkbox" value="" id="tenda" name="tenda">
+                                <label class="form-check-label" for="tenda">Palco</label>
+                            </div>-->
+
+                    <div class="pb-4">
+                        <a href="{{ route('clientes.index')}}" class="btn btn-danger btn-lg col-md-2" style="margin-left: 400px;">Cancelar</a>
+                        <button type="submit" class="btn btn-lg col-md-2"
+                            style="margin-left: 20px; background-color: #5EB7CB">Confirmar</button>
+                    </div>
+            </form>
         </div>
 
     </div>
