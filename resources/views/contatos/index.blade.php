@@ -65,7 +65,7 @@
                     <input type="text" class="form-control pb-5" name="mensagem" id="mensagem" required>
                 </div>
 
-                <div class="form-group col-6 m-0    ">
+                <div class="form-group col-6">
                     <label for="cidade">Cidade</label>
                     <select class="form-select" id="cidade" name="cidade" required>
                         <option value=""></option>
@@ -74,9 +74,10 @@
                     </select>
                 </div>
             </form>
-            <div class="py-4">
-                <button type="submit" class="btn btn-lg"
-                    style="width:220px; margin-left: 40.5%;background-color: #5EB7CB">Confirmar</button>
+            <div class="pb-4">
+                <a href="#" class="btn btn-danger btn-lg col-md-2" style="margin-left: 400px;">Cancelar</a>
+                <button type="submit" class="btn btn-lg col-md-2"
+                    style="margin-left: 20px; background-color: #5EB7CB">Confirmar</button>
             </div>
         </div>
     </div>

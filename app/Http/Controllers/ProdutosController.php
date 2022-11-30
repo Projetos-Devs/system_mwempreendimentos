@@ -19,4 +19,10 @@ class ProdutosController extends Controller
         $produtos->delete();
         return redirect()->route('produtos.index')->with('sucesso', 'Produto deletado com sucesso');
     }
+
+    public function create()
+    {
+        $produtos = Produto::all()->sortBy('nome');
+        return view("produtos.create", compact('produtos'));
+    }
 }

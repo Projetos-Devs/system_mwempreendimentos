@@ -42,6 +42,9 @@ Route::get('/admin/create', [LoginController::class, 'create'])->name('admin.cre
 
 //Rotas de produtos
 Route::get('/produtos', [ProdutosController::class, 'index'])->name('produtos.index');
+
+Route::get('/produtos/create', [ProdutosController::class, 'create'])->name('produtos.create');
+
 Route::delete('/produtos/{id}', [ProdutosController::class, 'destroy'])->name('produtos.destroy');
 
 //ROTAS DE CONTATO

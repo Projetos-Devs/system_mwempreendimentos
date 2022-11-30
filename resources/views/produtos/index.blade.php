@@ -3,8 +3,11 @@
 @section('title', 'Empreendimentos')
 
 @section('conteudo')
+
+
 <table class="table table-responsive">
     <thead class="table-dark">
+        <a href="{{ route('produtos.create')}}" class="btn btn-primary m-4 rounded-circle"><i class="bi bi-plus fs-4"></i></a>
         <tr class="text-center rounded-4" style="margin-right: 50px; margin-left: 50px ">
             <th>Id</th>
             <th>Nome do produto</th>
