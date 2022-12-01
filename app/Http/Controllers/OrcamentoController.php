@@ -16,8 +16,9 @@ class OrcamentoController extends Controller
     {
         $municipios = Municipio::all()->sortBy('nome');
         $ufs = Uf::all()->sortBy('sigla');
+        $produtos = Produto::all()->sortBy('nome');
         
-        return view('orcamentos.index', compact('municipios', 'ufs'));
+        return view('orcamentos.index', compact('municipios', 'ufs', 'produtos'));
     }
 
 
@@ -25,11 +26,21 @@ class OrcamentoController extends Controller
     public function store(Request $request)
     {
         $input = $request->toArray(); // Recebe um array com os campos do formulário
+
+        $listaProdutos = '<ul>';
+
+        foreach($input['produtos'] AS $produtos){
+            $listaProdutos .= "<li>".$produtos." - Qtd: ???</li>";
+        }
+
+        $listaProdutos .= '</ul>';
+
+        $input['produtos'] = $listaProdutos;
     
         Orcamento::create($input);
 
         return redirect()->route('orcamentos.index');
     }
 
-
+    
 }

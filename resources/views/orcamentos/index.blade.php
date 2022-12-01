@@ -29,7 +29,7 @@
                 @csrf
                 <input type="hidden" value="1" name="id_cliente">
                 <input type="hidden" value="1" name="id_user">
-                <input type="hidden" value="1" name="id_produto">
+                <input type="hidden" value="6" name="id_produto">
                 <input type="hidden" value="andamento" name="status">
                 <div class="row m-2">
 
@@ -75,10 +75,17 @@
                     </div>
 
                     <div class="form-group col-6 mb-5">
-                        <label for="id_uf">Produtos ou Serviços</label>
-                        <select class="form-select" id="estado" name="id_uf" required>
-                            <option value="">--</option>
-                        </select>
+                            @foreach ($produtos as $produtos)
+                                <div>
+                                    <input type="checkbox" name="produtos[]" value="{{$produtos->nome}}">{{$produtos->nome}}
+                                    <select name="qtd[]">
+                                        <option value=""></option>
+                                        @for ($cont = 1; $cont <= $produtos->quantidade_estoque; $cont++)
+                                            <option value="{{ $cont }}">{{ $cont }}</option>
+                                        @endfor
+                                    </select>
+                                </div>
+                            @endforeach
                     </div>
 
                     
