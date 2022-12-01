@@ -6,8 +6,8 @@
 <h1>Bem Vindo ao<br>
 Site MW
 Empreendimentos</h1>
-<a href="{{route('orcamentos.index')}}">Solicite seu orçamento</a>
-<a href="{{route('tela_admin.index')}}">tela adm</a>
-<a href="{{route('tela_admin.details')}}">tela adm 2</a>
-<a href="{{route('produtos.index')}}">tela produtos</a>
+<a href="{{route('orcamentos.index')}}">Solicite seu orçamento</a><br>
+<a href="{{route('telas_admin.clientes')}}">Detalhes dos Clientes</a><br>
+<a href="{{route('telas_admin.orcamentos')}}">Detalhes dos Orcamentos</a><br>
+<a href="{{route('produtos.index')}}">Detalhes dos Produtos</a>
 @endsection

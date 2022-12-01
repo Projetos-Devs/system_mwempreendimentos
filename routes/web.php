@@ -32,8 +32,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index'])->name('home.index');
 
 //ROTAS DA TELA DE ADMIN
-Route::get('/tela_admin', [TelaAdminController::class, 'index'])->name('tela_admin.index');
-Route::get('/tela_admin/details', [TelaAdminController::class, 'details'])->name('tela_admin.details');
+Route::get('/telas_admin/clientes', [TelaAdminController::class, 'clientes'])->name('telas_admin.clientes');
+Route::get('/telas_admin/orcamentos', [TelaAdminController::class, 'orcamentos'])->name('telas_admin.orcamentos');
 
 //ROTAS DE LOGIN
 Route::get('/admin', [LoginController::class, 'index'])->name('admin.index');

@@ -10,21 +10,21 @@ use Spatie\FlareClient\Http\Client;
 
 class TelaAdminController extends Controller
 {
-   public function index()
+   public function clientes()
    {
     $clientes = Cliente::all()->sortBy('nome');
     $orcamentos = Orcamento::all();
     $totalOrcamentos = Orcamento::all()->count();
 
-    return view('tela_admin.index', compact('clientes', 'orcamentos', 'totalOrcamentos'));
+    return view('telas_admin.clientes', compact('clientes', 'orcamentos', 'totalOrcamentos'));
    }
 
-   public function details()
+   public function orcamentos()
    {
     $clientes = Cliente::all()->sortBy('nome');
     $orcamentos = Orcamento::all();
     $totalOrcamentos = Orcamento::all()->count();
 
-    return view('tela_admin.details', compact('clientes', 'orcamentos', 'totalOrcamentos'));
+    return view('telas_admin.orcamentos', compact('clientes', 'orcamentos', 'totalOrcamentos'));
    }
 }

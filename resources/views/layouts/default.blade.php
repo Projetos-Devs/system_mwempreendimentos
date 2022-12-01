@@ -14,7 +14,6 @@
 
     <style type="text/css">
         nav {
-            /*class="navbar-dark bg-dark"*/
             background-color: black;
             background-image: linear-gradient(to right, #21172A, #18141A, transparent, #131614, #182B1D, #182B1D)
         }
@@ -36,7 +35,7 @@
         <div class="container pt-2">
             <a href="{{ route('home.index') }}"><img src="/images/logo_white.png" height="50"
                     alt="MWEmpreendimentos"></a>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse">
                 <ul class="navbar-nav">
                     <li class="nav-item px-3">
                         <a class="nav-link text-white" href="{{ route('home.index') }}">Home</a>
@@ -44,11 +43,12 @@
                     <li class="nav-item px-3">
                         <a class="nav-link text-white" href="">Sobre</a>
                     </li>
-                    <li class="nav-item px-3 dropdown">
-                        <a class="nav-link text-white" href="{{ route('produtos.index')}}">Produtos</a>
+                    <li class="nav-item px-3">
+                        <a class="nav-link text-white" href="{{ route('produtos.index') }}" role="button">Produtos</a>
                     </li>
-                    <li class="nav-item px-3 dropdown">
-                        <a class="nav-link text-white" href="{{ route('orcamentos.index') }}">Orçamento</a>
+
+                    <li class="nav-item px-3">
+                        <a class="nav-link text-white" href="{{ route('clientes.index') }}">Orçamento</a>
                     </li>
                     <li class="nav-item px-3">
                         <a class="nav-link text-white" href="{{ route('contatos.index') }}">Contato</a>

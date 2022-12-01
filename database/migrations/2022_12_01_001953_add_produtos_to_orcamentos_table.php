@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('orcamentos', function (Blueprint $table) {
-            $table->longText('produtos')->nullable();
+            $table->longText('produtos')->nullable()->after('tipo_evento');
         });
     }
 

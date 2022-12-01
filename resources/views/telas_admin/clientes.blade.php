@@ -5,7 +5,7 @@
 @section('conteudo')
 
 <div>
-    <h2 class="text-white rounded-4 p-2" style="background-color: #2D2D3C; text-align: center; margin-right: 50px; margin-left: 50px ">Cliente</h2>
+    <h2 class="text-white rounded-4 p-2" style="background-color: #2D2D3C; text-align: center; margin-right: 50px; margin-left: 50px ">Clientes</h2>
 </div>
 @foreach ($clientes as $cliente)
 <div class="rounded-4 p-2 row mb-3" style="background-color: #2D2D3C; margin-left: 50px; margin-right: 50px; text-align: center;">
