@@ -47,6 +47,10 @@ Route::get('/produtos/create', [ProdutosController::class, 'create'])->name('pro
 
 Route::delete('/produtos/{id}', [ProdutosController::class, 'destroy'])->name('produtos.destroy');
 
+Route::get('/produtos/edit/{id}', [ProdutosController::class, 'edit'])->name('produtos.edit');
+
+Route::put('/produtos/{id}', [ProdutosController::class, 'update'])->name('produtos.update');
+
 //ROTAS DE CONTATO
 Route::get('/contatos', [ContatoController::class, 'index'])->name('contatos.index');
 

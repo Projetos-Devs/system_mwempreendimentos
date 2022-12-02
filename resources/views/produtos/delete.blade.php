@@ -1,4 +1,5 @@
-<div class="modal fade" id="modal-deletar-{{$produtos->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- Modal -->
+<div class="modal fade" id="modal-deletar-{{$produto->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -11,7 +12,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-          <form action="{{ route('produtos.destroy', $produtos->id) }}" method="POST">
+          <form action="{{ route('produtos.destroy', $produto->id) }}" method="POST">
             @csrf
             @method('delete')
           <button type="submit" class="btn btn-danger">Confirmar</button>
