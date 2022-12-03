@@ -12,6 +12,21 @@ use Iluminate\Support\Facades\Storage;
 
 class OrcamentoController extends Controller
 {
+
+
+    public function detalhes()
+   {
+      $clientes = Cliente::all();
+      $orcamentos = Orcamento::all();
+      $totalOrcamentos = Orcamento::all()->count();
+
+      return view('admin.orcamentos.detalhes', compact('clientes', 'orcamentos', 'totalOrcamentos'));
+   }
+
+
+
+
+
     public function index(Request $request)
     {
         $municipios = Municipio::all()->sortBy('nome');
@@ -30,7 +45,7 @@ class OrcamentoController extends Controller
         $listaProdutos = '<ul>';
 
         foreach($input['produtos'] AS $produtos){
-            $listaProdutos .= "<li>".$produtos." - Qtd: ???</li>";
+            $listaProdutos .= "<li>".$produtos." - Qtd: </li>";
         }
 
         $listaProdutos .= '</ul>';

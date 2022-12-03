@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title')</title>
-    <link rel="icon" href="/images/icon.png">
-    <link rel="stylesheet" href="/css/icons/bootstrap-icon.css">
+    <link rel="shortcut icon" href="/images/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/icons/bootstrap-icons.css">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
 
 
@@ -44,7 +44,7 @@
                         <a class="nav-link text-white" href="">Sobre</a>
                     </li>
                     <li class="nav-item px-3">
-                        <a class="nav-link text-white" href="{{ route('produtos.index') }}" role="button">Produtos</a>
+                        <a class="nav-link text-white" href="" role="button">Produtos</a>
                     </li>
 
                     <li class="nav-item px-3">

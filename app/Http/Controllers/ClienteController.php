@@ -10,6 +10,16 @@ class ClienteController extends Controller
 
 
 
+    public function detalhes()
+    {
+       $clientes = Cliente::all()->sortBy('nome');
+ 
+       return view('admin.clientes.detalhes', compact('clientes'));
+    }
+
+
+    
+
     public function index(Request $request)
     {
 
@@ -17,12 +27,13 @@ class ClienteController extends Controller
 
     }
 
-    public function create(Request $request)
+    public function create()
     {
 
         return view('clientes.create');
 
     }
+    
 
 
     public function store(Request $request){
@@ -31,7 +42,7 @@ class ClienteController extends Controller
     
         Cliente::create($input);
 
-        return redirect()->route('clientes.index');
+        return redirect()->route('orcamentos.index');
 
 
     }

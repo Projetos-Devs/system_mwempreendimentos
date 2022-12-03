@@ -1,4 +1,4 @@
-@extends('layouts.default')
+@extends('admin.layout.default')
 
 @section('title', 'Empreendimentos')
 
@@ -27,15 +27,17 @@
                 <td class="align-middle">{{$produto->tipo}}</td>
                 <td class="align-middle">{{$produto->quantidade_estoque}}</td>
                 <td class="align-middle text-center"> 
-                    <a href="{{ route('produtos.edit', $produto->id)}}" class="btn btn-primary" title="Editar"><i class="bi bi-pen"></i></a>
-                    <a href="{{route('produtos.destroy', $produto->id)}}" class="btn btn-danger " title="Excluir" data-bs-toggle="modal" data-bs-target="#modal-deletar-{{$produto->id}}"><i class="bi bi-trash"></i></i></a></td>
+                    <a href="{{ route('produtos.edit', $produto->id)}}" class="btn btn-primary" title="Editar">
+                        <i class="bi bi-pen"></i></a>
+                    <a href="{{ route('produtos.destroy', $produto->id)}}" class="btn btn-danger " title="Excluir" 
+                        data-bs-toggle="modal" data-bs-target="#modal-deletar-{{$produto->id}}">
+                        <i class="bi bi-trash"></i></i></a>
 
-                    @include('produtos.delete')
+                    @include('admin.produtos.delete')
                 </td>
             </tr>
         @endforeach
         </tbody>
     </table>
 
-    <div>
 @endsection

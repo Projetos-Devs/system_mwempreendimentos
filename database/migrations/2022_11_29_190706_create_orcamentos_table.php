@@ -28,10 +28,6 @@ return new class extends Migration
             $table->unsignedBigInteger('id_municipio');
             $table->foreign('id_municipio')->references('id')->on('municipios')
                 ->onUpdate('restrict')->onDelete('restrict');
-
-                $table->unsignedBigInteger('id_produto');
-            $table->foreign('id_produto')->references('id')->on('produtos')
-                ->onUpdate('restrict')->onDelete('restrict');
                 
             $table->unsignedBigInteger('id_cliente');
             $table->foreign('id_cliente')->references('id')->on('clientes')
