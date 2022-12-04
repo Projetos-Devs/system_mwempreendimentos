@@ -28,21 +28,18 @@
     <div class="form-group col-6 text-white pb-3" style="text-align: center;">
         <label style="font-size: 1.5rem">Email: {{$cliente->email}}</label>
     </div>
-    
-    <div class="form-group col-6 text-white">
-        <label style="font-size: 1.5rem">Empresa:</label>
-    </div>
 
     <div class="form-group col-6 text-white">
         <label style="font-size: 1.5rem">Telefone: {{$cliente->telefone}}</label>
     </div>
 
-    <div class="form-group col-6 text-white">
-        <a href="#" class="btn btn-lg align-middle" style="width: 220px; margin-left: 65px; background-color: #90FFE4;">Orçamentos: </a>
-    </div>
-
 </div>
+
 @endforeach
+
+<div class="form-group col-6 text-white">
+    <a href="{{route('orcamentos.detalhes')}}" class="btn btn-lg align-middle mb-3" style="width: 220px; margin-left: 450px; background-color: #90FFE4;">Orçamentos </a>
+</div>
 
 @endif
 

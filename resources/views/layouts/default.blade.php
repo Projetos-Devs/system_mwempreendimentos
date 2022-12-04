@@ -44,7 +44,7 @@
                         <a class="nav-link text-white" href="">Sobre</a>
                     </li>
                     <li class="nav-item px-3">
-                        <a class="nav-link text-white" href="" role="button">Produtos</a>
+                        <a class="nav-link text-white" href="{{route('servicos.index')}}" role="button">Produtos</a>
                     </li>
 
                     <li class="nav-item px-3">

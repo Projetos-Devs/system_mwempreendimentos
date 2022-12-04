@@ -7,6 +7,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\OrcamentoController;
 use App\Http\Controllers\ProdutosController;
+use App\Http\Controllers\ServicoController;
 use App\Http\Controllers\ServicosController;
 use App\Http\Controllers\UsuarioController;
 use Illuminate\Support\Facades\Route;
@@ -88,3 +89,6 @@ Route::post('/clientes', [ClienteController::class, 'store'])->name('clientes.st
 //ROTAS DE CONTATO
 
 Route::get('/contatos', [ContatoController::class, 'index'])->name('contatos.index');
+
+//ROTAS DE SERVIÇOS
+Route::get('/servicos', [ServicoController::class, 'index'])->name('servicos.index');
