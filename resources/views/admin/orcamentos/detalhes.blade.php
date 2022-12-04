@@ -10,6 +10,13 @@
     <h2 class="text-center bold" style="color: white;">Orçamentos</h2>
 </div>
 
+@if ($orcamentos->count() == 0)
+    
+
+<h3 class="mt-4 text-center">Voce não possui orçamentos cadastrados!</h3>
+
+@else
+
 @foreach ($orcamentos as $orcamento)
 
     <div class="container border border-2 pt-1 pb-5 rounded-4 bg-dark mb-5 shadow text-center" style="color: white;">
@@ -28,5 +35,7 @@
 
     
     @endforeach
+
+    @endif
     
 @endsection

@@ -9,9 +9,15 @@
 </div>    
 
 
+@if ($clientes->count() == 0)
+    
+
+<h3 class="mt-4 text-center">Voce não possui clientes cadastrados!</h3>
+
+@else
+
 @foreach ($clientes as $cliente)
 
-    
 
 <div class="rounded-4 p-2 row mb-3" style="background-color: #2D2D3C; margin-left: 50px; margin-right: 50px; text-align: center;">
     <h2 class="text-white p-0 m-0 pt-3" style="text-align: center;">
@@ -36,8 +42,8 @@
     </div>
 
 </div>
-
-
 @endforeach
+
+@endif
 
 @endsection

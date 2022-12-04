@@ -7,6 +7,7 @@ use App\Models\Produto;
 use App\Models\Municipio;
 use App\Models\Orcamento;
 use App\Models\Uf;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Iluminate\Support\Facades\Storage;
 
@@ -29,11 +30,13 @@ class OrcamentoController extends Controller
 
     public function index(Request $request)
     {
+        $clientes = Cliente::all();
+        $users = User::all();
         $municipios = Municipio::all()->sortBy('nome');
         $ufs = Uf::all()->sortBy('sigla');
         $produtos = Produto::all()->sortBy('nome');
         
-        return view('orcamentos.index', compact('municipios', 'ufs', 'produtos'));
+        return view('orcamentos.index', compact('municipios', 'ufs', 'produtos', 'clientes', 'users'));
     }
 
 

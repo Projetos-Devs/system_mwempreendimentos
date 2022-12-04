@@ -27,8 +27,13 @@
             <form method="POST" action="{{ route('orcamentos.store') }}" enctype="multipart/form-data">
 
                 @csrf
-                <input type="hidden" value="4" name="id_cliente">
-                <input type="hidden" value="1" name="id_user">
+                @foreach ( $clientes as $cliente)
+                <input type="hidden" value="{{$cliente->id}}" name="id_cliente">
+                @endforeach
+
+                @foreach ($users as $user)
+                <input type="hidden" value="{{$user->id}}" name="id_user">
+                @endforeach
                 <input type="hidden" value="andamento" name="status">
                 <div class="row m-2">
 
