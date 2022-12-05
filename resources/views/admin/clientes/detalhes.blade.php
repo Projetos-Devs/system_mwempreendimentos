@@ -23,7 +23,7 @@
     <h2 class="text-white p-0 m-0 pt-3" style="text-align: center;">
          {{$cliente->nome}}
     </h2>
-    <h2 class="text-white pb-3" style="text-align: center; font-size: 1rem;">______________________________________________________________________________________________________________________________________________________________________________</h2>
+    <h2 class="text-white pb-3" style="text-align: center; font-size: 1rem;">_____________________________________________________________________________________________________________________________________________</h2>
 
     <div class="form-group col-6 text-white pb-4" style="text-align: center;">
         <label style="font-size: 1.5rem">Email: {{$cliente->email}}</label>
@@ -48,10 +48,6 @@
 </div>
 
 @endforeach
-
-<div class="form-group col-6 text-white">
-    <a href="{{route('orcamentos.detalhes')}}" class="btn btn-lg align-middle mb-3" style="width: 220px; margin-left: 450px; background-color: #90FFE4;">Orçamentos </a>
-</div>
 
 @endif
 

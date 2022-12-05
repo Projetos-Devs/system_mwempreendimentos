@@ -18,7 +18,7 @@ class OrcamentoController extends Controller
     public function detalhes()
    {
       $clientes = Cliente::all();
-      $orcamentos = Orcamento::all();
+      $orcamentos = Orcamento::all()->sortBy('status');
       $totalOrcamentos = Orcamento::all()->count();
 
       return view('admin.orcamentos.detalhes', compact('clientes', 'orcamentos', 'totalOrcamentos'));
