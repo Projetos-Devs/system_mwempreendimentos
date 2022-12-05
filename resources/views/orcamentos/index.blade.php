@@ -43,7 +43,7 @@
                     </div>
 
                     <div class="form-group col-6">
-                        <label for="endereco">Endereço</label>
+                        <label for="endereco">Localização</label>
                         <input name="endereco" id="endereco" type="text" class="form-control" required>
                     </div>
 
@@ -78,10 +78,21 @@
                         </select>
                     </div>
 
-                    <div class="form-group col-6 mb-5">
-                            @foreach ($produtos as $produtos)
+                    <div class="form-group mt-4">
+                        <label for="endereco">Descrição do evento</label>
+                        <textarea name="descricao" id="descricao" class="form-control"></textarea>
+                    </div>
+
+                    <h3 class="mt-5 mb-5">Produtos Disponíveis:</h3>
+                    
+
+                    <div class="row px-5">
+
+                        @foreach ($produtos as $produtos)
+
+                    <div class="col-sm-4 mb-4 mt-3" style="font-size: 12pt">
                                 <div>
-                                    <input type="checkbox" name="produtos[]" value="{{$produtos->nome}}">{{$produtos->nome}}
+                                    <input style="margin-right: 13px; margin-bottom: 20px;" type="checkbox" name="produtos[]" value="{{$produtos->nome}}">{{$produtos->nome}}
                                     <select name="qtd[]">
                                         <option value=""></option>
                                         @for ($cont = 1; $cont <= $produtos->quantidade_estoque; $cont++)
@@ -89,27 +100,13 @@
                                         @endfor
                                     </select>
                                 </div>
-                            @endforeach
                     </div>
+                    @endforeach
+                </div>
 
                     
 
-                        
-
-                    
-
-
-                    <!--<div class="form-group">
-                                <input class="form-check-input" type="checkbox" value="" id="tenda" name="tenda">
-                                <label class="form-check-label" for="tenda">Tenda</label>
-                            </div>
-
-                            <div class="form-group">
-                                <input class="form-check-input" type="checkbox" value="" id="tenda" name="tenda">
-                                <label class="form-check-label" for="tenda">Palco</label>
-                            </div>-->
-
-                    <div class="pb-4">
+                    <div class="mt-3 pb-5">
                         <a href="{{ route('clientes.index')}}" class="btn btn-danger btn-lg col-md-2" style="margin-left: 400px;">Cancelar</a>
                         <button type="submit" class="btn btn-lg col-md-2"
                             style="margin-left: 20px; background-color: #5EB7CB">Confirmar</button>

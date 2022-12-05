@@ -25,12 +25,24 @@
     </h2>
     <h2 class="text-white pb-3" style="text-align: center; font-size: 1rem;">______________________________________________________________________________________________________________________________________________________________________________</h2>
 
-    <div class="form-group col-6 text-white pb-3" style="text-align: center;">
+    <div class="form-group col-6 text-white pb-4" style="text-align: center;">
         <label style="font-size: 1.5rem">Email: {{$cliente->email}}</label>
     </div>
 
-    <div class="form-group col-6 text-white">
+    <div class="form-group col-6 text-white pb-4">
         <label style="font-size: 1.5rem">Telefone: {{$cliente->telefone}}</label>
+    </div>
+
+    <div class="form-group col-6 text-white pb-4">
+        <label style="font-size: 1.5rem">CPF: {{$cliente->cpf}}</label>
+    </div>
+
+    <div class="form-group col-6 text-white pb-4">
+        <label style="font-size: 1.5rem">CNPJ: {{$cliente->cnpj}}</label>
+    </div>
+
+    <div class="form-group text-white text-center pb-4">
+        <label style="font-size: 1.5rem">Endereço: {{$cliente->endereco}}</label>
     </div>
 
 </div>

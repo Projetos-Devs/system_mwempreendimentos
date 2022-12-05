@@ -35,7 +35,11 @@
 
                     <div class="form-group col-6 mb-5">
                         <label for="tipo">Tipo</label>
-                        <input type="text" class="form-control" name="tipo" id="tipo">
+                        <select class="form-select" id="tipo" name="tipo" required>
+                            <option>--</option>
+                            <option value="estruturas">Estruturas</option>
+                            <option value="maquinas">Máquinas</option>
+                        </select>
                     </div>
 
                     <div class="form-group col-6 mb-4">

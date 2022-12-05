@@ -15,7 +15,7 @@ class Orcamento extends Model
     protected $fillable = [
 
 
-        'tipo_evento', 'data_inicio', 'endereco', 'status', 'data_fim', 'id_municipio', 'id_uf', 'id_user', 'id_cliente', 'produtos'
+        'tipo_evento', 'descricao', 'data_inicio', 'endereco', 'status', 'data_fim', 'id_municipio', 'id_uf', 'id_user', 'id_cliente', 'produtos'
 
 
 

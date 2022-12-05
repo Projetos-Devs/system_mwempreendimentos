@@ -28,7 +28,7 @@
 
                 <div class="col-sm-6">
                     <label class="form-label" for="telefone">Telefone</label>
-                    <input name="telefone"  type="" class="form-control" required>
+                    <input name="telefone"  type="" class="form-control" placeholder="(XX) XXXXX-XXXX" required>
                 </div>
 
                 <div class="col-sm-6">
