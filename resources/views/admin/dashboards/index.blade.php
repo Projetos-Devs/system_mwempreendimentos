@@ -6,6 +6,10 @@
 @section('conteudo')
     <h1 class="mb-5">Dashboards</h1>
 
+    @if (Session::get('sucesso'))
+        <div class="alert alert-success text-center">{{ Session::get('sucesso') }}</div>
+    @endif
+
     <div class="container">
     <div class="row g-5">
         <div class="col-md-4">

@@ -35,7 +35,11 @@
 
                     <div class="form-group col-6 mb-5">
                         <label for="tipo">Tipo</label>
-                        <input type="text" class="form-control" name="tipo" id="tipo" value="{{$produto->tipo}}" required>
+                        <select class="form-select" id="tipo" name="tipo" required>
+                            <option value="">--</option>
+                            <option value="estruturas"@selected($produto->tipo == 'estruturas')>Estruturas</option>
+                            <option value="maquinas"@selected($produto->tipo == 'maquinas')>Máquinas</option>
+                        </select>
                     </div>
 
                     <div class="form-group col-6 mb-4">

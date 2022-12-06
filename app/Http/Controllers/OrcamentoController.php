@@ -7,7 +7,6 @@ use App\Models\Produto;
 use App\Models\Municipio;
 use App\Models\Orcamento;
 use App\Models\Uf;
-use App\Models\User;
 use Illuminate\Http\Request;
 use Iluminate\Support\Facades\Storage;
 
@@ -15,29 +14,68 @@ class OrcamentoController extends Controller
 {
 
 
-    public function detalhes()
-   {
-      $clientes = Cliente::all();
-      $orcamentos = Orcamento::all()->sortBy('status');
-      $totalOrcamentos = Orcamento::all()->count();
+//     public function detalhes()
+//    {
 
-      return view('admin.orcamentos.detalhes', compact('clientes', 'orcamentos', 'totalOrcamentos'));
-   }
+//       $clientes = Cliente::all();
+//       $orcamentos = Orcamento::all()->sortBy('status');
+//       $totalOrcamentos = Orcamento::all()->count();
 
-
+//       return view('admin.orcamentos.detalhes', compact('clientes', 'orcamentos', 'totalOrcamentos'));
+//    }
 
 
 
     public function index(Request $request)
     {
         $clientes = Cliente::all();
-        $users = User::all();
         $municipios = Municipio::all()->sortBy('nome');
         $ufs = Uf::all()->sortBy('sigla');
         $produtos = Produto::all()->sortBy('nome');
         
-        return view('orcamentos.index', compact('municipios', 'ufs', 'produtos', 'clientes', 'users'));
+        return view('orcamentos.index', compact('municipios', 'ufs', 'produtos', 'clientes'));
     }
+
+
+
+
+
+    // public function edit($id)
+    // {
+    //    $municipios = Municipio::all();
+    //    $produtos = Produto::all();
+    //     $ufs = Uf::all();
+    //     $users = User::all();
+    //     $clientes = Cliente::all();
+    //     $orcamento = Orcamento::find($id);
+    //    return view('admin.orcamentos.edit', compact('orcamento', 'clientes', 'users', 'municipios', 'ufs', 'produtos'));
+        
+    // }
+    
+
+
+    // public function update(Request $request, $id)
+    // {
+
+    //     $input = $request->toArray();
+    //    $orcamento = Orcamento::find($id);
+       
+    //    $orcamento->fill($input);
+    //    $orcamento->save();
+    //    return redirect()->route('orcamentos.detalhes')->with('sucesso', 'Orçamento alterado com sucesso');
+        
+    // }
+
+
+    // public function destroy($id)
+    // {
+        
+    //     $orcamento = Orcamento::find($id);
+    //     $orcamento->delete();
+    //     return redirect()->route('orcamentos.detalhes');
+
+
+    // }
 
 
 

@@ -21,17 +21,33 @@
 
                 <div class="container">
 
-                    <h2>Nome do Cliente: {{ $orcamento->cliente->nome }}</h2><br>
+                    <div class="row mb-2">
+
+                    <div class="col-5 p-3 pt-4 text-start">
+                    <h2 class="text-middle">Nome do Cliente: {{ $orcamento->cliente->nome }}</h2><br>
+                    </div>
+
+                    <div class="col-7 p-3 pt-4 text-end" >
+                    <a href="{{ route('orcamentos.editorcamento', $orcamento->id) }}" class="btn btn-primary mx-1" title="Editar">
+                        <i class="bi bi-pen"></i></a>
+                    <a href="{{ route('orcamentos.destroyorcamento', $orcamento->id) }}" class="btn btn-danger " title="Excluir"
+                        data-bs-toggle="modal" data-bs-target="#modal-deletar-{{ $orcamento->id }}">
+                        <i class="bi bi-trash"></i></i></a>
+                        @include('admin.orcamentos.delete')
+                    </div>
+
+                    </div>
+                  
 
                     <div class="row">
 
                         <h3 class="mb-5">Tipo do Evento: {{ $orcamento->tipo_evento }}</h3>
-                        <h3 class="col-sm-6">Data de Inicio: {{ date( 'd/m/Y' , strtotime($orcamento->data_inicio)) }}</h3><br>
-                        <h3 class="col-sm-6">Data de Término: {{ date( 'd/m/Y' , strtotime($orcamento->data_fim)) }}</h3><br>
-                        <h3 class="col-sm-6">Cidade: {{ $orcamento->municipio->nome }}</h3>
-                        <h3 class="col-sm-6">Estado: {{ $orcamento->uf->sigla }}</h3><br>
+                        <h3 class="col-sm-6 mt-2">Data de Inicio: {{ date( 'd/m/Y' , strtotime($orcamento->data_inicio)) }}</h3><br>
+                        <h3 class="col-sm-6 mt-2">Data de Término: {{ date( 'd/m/Y' , strtotime($orcamento->data_fim)) }}</h3><br>
+                        <h3 class="col-sm-6 mt-4">Cidade: {{ $orcamento->municipio->nome }}</h3>
+                        <h3 class="col-sm-6 mt-4">Estado: {{ $orcamento->uf->sigla }}</h3><br>
 
-                        <h3 class="mt-4">Status do Orçamento:</h3>
+                        <h3 class="mt-4 mb-3">Status do Orçamento:</h3>
 
                             @if ($orcamento->status == 'andamento')
                                 <div class="d-grid gap-2 col-3 mx-auto mt-2">
@@ -56,29 +72,30 @@
 
                             <summary>Mais Informações</summary>
 
-                            <h3 class="mt-5 text-center">Localização do evento:</h3><br>
+                            <h3 class="mt-4 text-center">Localização do evento:</h3><br>
 
-                            <p class="px-3 fs-5">{{ $orcamento->endereco }}</p>
-
+                            <div class="container" style="width: 500px;">
+                            <p class="px-3 fs-5 text-center text-break">{{ $orcamento->endereco }}</p>
+                            </div>
 
                             <h3 class="mt-4 text-center">Descrição do evento:</h3><br>
                             
                             @if ($orcamento->descricao == null)
 
-                            <h5 class="">Não possui!!</h5>
+                            <h5 class="mb-3">Não possui!!</h5>
                                 
                             @else
 
-                            <p class="px-3 fs-5 mt-2 text-center">{{ $orcamento->descricao }}</p>
-                                
+                            <div class="container" style="width: 500px;">
+                            <p class="pt-1 px-4 fs-5 text-center text-break">{{ $orcamento->descricao }}</p>
+                            </div>
                             @endif
 
-                            <h3 class="mt-3 mb-4 text-center">Produtos do evento:</h3>
+                            <h3 class="mt-4 text-center">Produtos do evento:</h3>
 
-                            <ul class="mt-4 px-5 text-center">
-
-                                    <li class="text-capitalize">{{ $orcamento->produtos }}</li>
-                            </ul>
+                            <div class="mt-3 container" style="width: 500px;">
+                                    <p class="pt-1 px-4 fs-5 text-center text-break text-capitalize">{{ $orcamento->produtos }}</p>
+                             </div>
 
                         </details>
 

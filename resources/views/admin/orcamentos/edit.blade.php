@@ -4,53 +4,48 @@
 
 @section('conteudo')
 
-    <div style="position:relative;">
-        <img class="w-100" style="height: 370px; margin-top: -50px; object-fit: cover; filter: brightness(55%);"
-            src="/images/orcamento.jpg">
+   
+    <div class="container">
 
-        <div class="container ">
-            <h1 class="text-white" style="position: relative; top: -150px; left: 40px; font-size:3.5em">Orçamento</h1>
-            <p class="text-white" style="position: relative; top: -155px; left: 40px;">Faça seu orçamento agora !</p>
-        </div>
-    </div>
-
-    <div class="container" style="margin-top: -60px">
-
-        <div class="text-white rounded-4 shadow-lg p-1 m-2 mt-4 mb-4"
+        <div class="text-white rounded-4 shadow-lg p-1 m-2 mt-5 mb-4"
             style="background-color: #2D2D3C; text-align: center;">
-            <h2>Orçamento</h2>
+            <h2>Editar Orçamento</h2>
         </div>
 
         <div class="text-white rounded-4 shadow-lg p-1 m-2" style="background-color: #2D2D3C;  margin-top: 30px;">
 
-            <form method="POST" action="{{ route('orcamentos.store') }}" enctype="multipart/form-data">
+            <form method="POST" action="{{ route('orcamentos.updateorcamento', $orcamento->id) }}" enctype="multipart/form-data">
 
                 @csrf
-
+                @method('PUT')
                 @foreach ($clientes as $cliente)
                     <input type="hidden" value="{{ $cliente->id }}" name="id_cliente">
+                @endforeach
+
+                @foreach ($users as $user)
+                    <input type="hidden" value="{{ $user->id }}" name="id_user">
                 @endforeach
                 <input type="hidden" value="andamento" name="status">
                 <div class="row m-2">
 
                     <div class="form-group col-6">
                         <label for="tipo_evento">Tipo do Serviço</label>
-                        <input type="text" class="form-control" name="tipo_evento" id="tipo" required>
+                        <input type="text" class="form-control" name="tipo_evento" id="tipo" value="{{$orcamento->tipo_evento}} " required>
                     </div>
 
                     <div class="form-group col-6">
                         <label for="endereco">Localização</label>
-                        <input name="endereco" id="endereco" type="text" class="form-control" required>
+                        <input name="endereco" id="endereco" type="text" class="form-control" value="{{$orcamento->endereco}}" required>
                     </div>
 
                     <div class="form-group col-6">
                         <label for="data_inicio">Data de início do evento</label>
-                        <input type="date" class="form-control" name="data_inicio" id="data_in" required>
+                        <input type="date" class="form-control" name="data_inicio" id="data_in" value="{{$orcamento->data_inicio}}" required>
                     </div>
 
                     <div class="form-group col-6">
                         <label for="data_fim">Data de término do evento</label>
-                        <input type="date" class="form-control" name="data_fim" id="data_fim" required>
+                        <input type="date" class="form-control" name="data_fim" id="data_fim" value="{{$orcamento->data_fim}}" required>
                     </div>
 
 
@@ -59,7 +54,7 @@
                         <select class="form-select" name="id_municipio" value="" required>
                             <option value="">--</option>
                             @foreach ($municipios as $municipio)
-                                <option value="{{ $municipio->id }}">{{ $municipio->nome }}</option>
+                                <option value="{{ $municipio->id }}" @selected($municipio->id == $orcamento->id_municipio)>{{ $municipio->nome }}</option>
                             @endforeach
                         </select>
                     </div>
@@ -69,14 +64,14 @@
                         <select class="form-select" id="estado" name="id_uf" required>
                             <option value="">--</option>
                             @foreach ($ufs as $uf)
-                                <option value="{{ $uf->id }}">{{ $uf->sigla }}</option>
+                                <option value="{{ $uf->id }}" @selected($uf->id == $orcamento->id_uf)>{{ $uf->sigla }}</option>
                             @endforeach
                         </select>
                     </div>
 
                     <div class="form-group mt-4">
                         <label for="endereco">Descrição do evento</label>
-                        <textarea name="descricao" id="descricao" class="form-control"></textarea>
+                        <textarea name="descricao" id="descricao" class="form-control" aria-valuetext="{{$orcamento->descricao}}">{{$orcamento->descricao}}</textarea>
                     </div>
 
                     <h3 class="mt-5 mb-5">Produtos Disponíveis:</h3>
@@ -92,7 +87,7 @@
                                     <select name="qtd[]">
                                         <option value="">--</option>
                                         @for ($cont = 1; $cont <= $produto->quantidade_estoque; $cont++)
-                                            <option value="{{ $cont }}">{{ $cont }}</option>
+                                            <option value="{{ $cont}}">{{ $cont }}</option>
                                         @endfor
                                     </select>
                                 </div>
@@ -107,12 +102,12 @@
                         <div class="row">
 
                             <div class="col text-end">
-                                <a href="{{ route('clientes.index') }}" class="btn btn-danger btn-lg col-md-3">Cancelar</a>
+                                <a href="{{ route('orcamentos.detalhesorcamento') }}" class="btn btn-danger btn-lg col-md-3">Cancelar</a>
                             </div>
 
                             <div class="col text-start">
                                 <button type="submit" class="btn btn-lg col-md-3"
-                                    style="background-color: #5EB7CB">Confirmar</button>
+                                    style="background-color: #5EB7CB">Alterar</button>
                             </div>
                         </div>
                     </div>

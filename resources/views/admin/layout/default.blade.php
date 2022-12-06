@@ -16,7 +16,7 @@
 <body class="bg-light">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
         <div class="container">
-            <a href=""><img src="/images/logo_white.png" height="50"
+            <a href="{{route('dashboards.index')}}"><img src="/images/logo_white.png" height="50"
                     alt="MWEmpreendimentos"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,16 +35,24 @@
                         </ul>
                     </li>
                     <li class="nav-item px-3">
-                        <a class="nav-link" href="{{route('clientes.detalhes')}}">Clientes</a>
+                        <a class="nav-link" href="{{route('clientes.detalhescliente')}}">Clientes</a>
                     </li>
                     <li class="nav-item px-3">
-                        <a class="nav-link" href="{{route('orcamentos.detalhes')}}">Orçamentos</a>
+                        <a class="nav-link" href="{{route('orcamentos.detalhesorcamento')}}">Orçamentos</a>
                     </li>
+
+                    @can('acessar-usuarios')
                     <li class="nav-item px-3 dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Olá</a>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Usuários</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="">Alterar dados</a></li>
-                            <li><a class="dropdown-item" href="">Sair</a></li>
+                            <li><a class="dropdown-item" href="{{ route('usuarios.create') }}">Cadastrar novo usuário</a></li>
+                        </ul>
+                    </li>
+                    @endcan
+                    <li class="nav-item px-3 dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Olá {{auth()->user()->name }}</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{route('login.logout')}}">Sair</a></li>
                         </ul>
                     </li>
                 </ul>

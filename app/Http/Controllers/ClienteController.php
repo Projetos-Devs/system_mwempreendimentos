@@ -10,12 +10,14 @@ class ClienteController extends Controller
 
 
 
-    public function detalhes()
-    {
-       $clientes = Cliente::all()->sortBy('nome');
+    // public function detalhes()
+    // {
+       
+    
+    //    $clientes = Cliente::all()->sortBy('nome');
  
-       return view('admin.clientes.detalhes', compact('clientes'));
-    }
+    //    return view('admin.clientes.detalhes', compact('clientes'));
+    // }
 
 
     

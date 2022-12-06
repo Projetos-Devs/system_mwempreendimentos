@@ -9,6 +9,14 @@ use Illuminate\Support\Facades\Storage;
 class ProdutosController extends Controller
 {
 
+   public function __construct()
+    
+    {
+
+        $this->middleware('auth');
+
+    }
+
 
     public function detalhes()
     {

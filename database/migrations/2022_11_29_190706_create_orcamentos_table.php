@@ -33,11 +33,6 @@ return new class extends Migration
             $table->foreign('id_cliente')->references('id')->on('clientes')
                 ->onUpdate('restrict')->onDelete('restrict');
 
-            $table->unsignedBigInteger('id_user');
-            $table->foreign('id_user')->references('id')->on('users')
-                ->onUpdate('restrict')->onDelete('restrict');
-
-
 
             $table->timestamps();
         });

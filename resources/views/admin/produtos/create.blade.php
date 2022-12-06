@@ -36,7 +36,7 @@
                     <div class="form-group col-6 mb-5">
                         <label for="tipo">Tipo</label>
                         <select class="form-select" id="tipo" name="tipo" required>
-                            <option>--</option>
+                            <option value="">--</option>
                             <option value="estruturas">Estruturas</option>
                             <option value="maquinas">Máquinas</option>
                         </select>
