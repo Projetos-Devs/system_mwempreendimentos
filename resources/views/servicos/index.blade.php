@@ -18,62 +18,37 @@
 
             <div class="col-4 text-center p-2 d-flex align-items-stretch">
                 <div class="rounded-4 bg-dark p-3" style="max-height: 500px;">
-                    <div class="align-middle" style="max-height: 200px;">
-                        <img src="/images/banheiro_quimico.jpg" style="max-height: 200px" alt="banheiro">
+                    <div class="align-middle">
+                        <img src="/images/banheiro_quimico.jpg" class="figure-img img-fluid" alt="banheiro">
                     </div>
                     <p class="text-light text-break">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 </div>
             </div>
-
-
             <div class="col-4 text-center p-2 d-flex align-items-stretch">
                 <div class="rounded-4 bg-dark p-3" style="max-height: 500px;">
-                    <div class="align-middle" style="max-height: 200px;">
-                        <img src="/images/camarim.jpg" style="max-height: 200px" alt="banheiro">
+                    <div class="align-middle">
+                        <img src="/images/camarim.jpg" class="figure-img img-fluid" alt="banheiro">
                     </div>
                     <p class="text-light text-break">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 </div>
             </div>
-
-
             <div class="col-4 text-center p-2 d-flex align-items-stretch">
                 <div class="rounded-4 bg-dark p-3" style="max-height: 500px;">
-                    <div class="align-middle" style="max-height: 200px;">
-                        <img src="/images/diciplinadores.jpg" style="max-height: 200px" alt="banheiro">
+                    <div class="align-middle">
+                        <img src="/images/diciplinadores.jpg" class="figure-img img-fluid" alt="banheiro">
                     </div>
                     <p class="text-light text-break">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 </div>
             </div>
-
-
             <div class="col-4 text-center p-2 d-flex align-items-stretch">
                 <div class="rounded-4 bg-dark p-3" style="max-height: 500px;">
-                    <div class="align-middle" style="max-height: 200px;">
-                        <img src="/images/foto_aluminio_p30.jpg" style="max-height: 200px" alt="banheiro">
+                    <div class="align-middle">
+                        <img src="/images/foto_aluminio_p30.jpg" class="figure-img img-fluid" alt="banheiro">
                     </div>
                     <p class="text-light text-break">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 </div>
             </div>
-
-
-            <div class="col-4 text-center p-2 d-flex align-items-stretch">
-                <div class="rounded-4 bg-dark p-3" style="max-height: 500px;">
-                    <div class="align-middle" style="max-height: 200px;">
-                        <img src="/images/diciplinadores.jpg" style="max-height: 200px" alt="banheiro">
-                    </div>
-                    <p class="text-light text-break">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
-
             
-            <div class="col-4 text-center p-2 d-flex align-items-stretch">
-                <div class="rounded-4 bg-dark p-3" style="max-height: 500px;">
-                    <div class="align-middle" style="max-height: 200px;">
-                        <img src="/images/diciplinadores.jpg" style="max-height: 200px" alt="banheiro">
-                    </div>
-                    <p class="text-light text-break">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
             
            
             

@@ -10,4 +10,9 @@ class ServicoController extends Controller
     {
         return view('servicos.index');
     }
+
+    public function detalhes()
+    {
+        return view('servicos.detalhes');
+    }
 }
