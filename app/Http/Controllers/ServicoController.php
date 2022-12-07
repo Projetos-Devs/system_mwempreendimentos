@@ -13,8 +13,28 @@ class ServicoController extends Controller
         return view('servicos.index', compact('produtos'));
     }
 
-    public function detalhes()
+
+
+
+
+    public function detalhes($id)
     {
-        return view('servicos.detalhes');
+        $servicos = Produto::all();
+        $produto = Produto::find($id);
+
+       return view('servicos.detalhes', compact('produto', 'servicos'));
+    }
+
+
+    public function update(Request $request, $id)
+    {
+       $input = $request->toArray();
+       $produto = Produto::find($id);
+ 
+       $produto->fill($input);
+       $produto->save();
     }
 }
+
+
+

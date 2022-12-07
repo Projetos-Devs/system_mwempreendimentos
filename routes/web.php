@@ -112,4 +112,6 @@ Route::get('/contatos', [ContatoController::class, 'index'])->name('contatos.ind
 
 Route::get('/servicos', [ServicoController::class, 'index'])->name('servicos.index');
 
-Route::get('/servicos/detalhes', [ServicoController::class, 'detalhes'])->name('servicos.detalhes');
+Route::get('/servicos/detalhes/{id}', [ServicoController::class, 'detalhes'])->name('servicos.detalhes');
+
+Route::put('/servicos/produto/{id}', [ServicoController::class, 'update'])->name('servicos.update');

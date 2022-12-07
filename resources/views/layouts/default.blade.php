@@ -23,8 +23,23 @@
             background-color: black;
             background-image: linear-gradient(to right, #21172A, #18141A, transparent, #131614, #182B1D, #182B1D);
 
-
         }
+
+        #imghover{
+
+            transition-property: all;
+            transition-duration: 0.5s;
+        }
+
+
+        #imagehover:hover{
+
+            transition-property: all;
+            transition-duration: 0.5s;
+            filter: brightness(55%);
+        }
+
+
     </style>
 
 </head>
@@ -74,6 +89,7 @@
     </footer>
 
 
+<script src="/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
