@@ -25,21 +25,21 @@
                         <img src="images/layout/toldo.png" class="d-block w-100 rounded-2 border boder-2" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Toldos</h5>
-                            <p>Some representative placeholder content for the first slide.</p>
+                            <p>Toldos? aqui temos!</p>
                         </div>
                     </div>
                     <div class="carousel-item" data-bs-interval="2000">
                         <img src="images/layout/gerador.png" class="d-block w-100 rounded-2 border boder-2" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Maquinas</h5>
-                            <p>Some representative placeholder content for the second slide.</p>
+                            <p>Encontre dentre variadas máquinas a exata para seu evento!</p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img src="images/layout/camarim.png" class="d-block w-100 rounded-2 border boder-2" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                         <h5>Outras estruturas</h5>
-                        <p>Some representative placeholder content for the third slide.</p>
+                        <p>Veja nossas outras estruturas!</p>
                         </div>
                     </div>
                     </div>
