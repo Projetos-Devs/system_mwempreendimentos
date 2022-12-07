@@ -84,7 +84,8 @@
         <span>
             Sistema desenvolvido na disciplina de Programação Avançada do curso de Sistema de Informação<br>
             Semestre letivo: 2022.2<br>
-            Centro Universitário UniRios
+            Centro Universitário UniRios<br><br>
+            Versão 1.0 do Sistema
         </span>
     </footer>
 

@@ -86,7 +86,7 @@ class AdminController extends Controller
         
         $orcamento = Orcamento::find($id);
         $orcamento->delete();
-        return redirect()->route('orcamentos.detalhesorcamento');
+        return redirect()->route('orcamentos.detalhesorcamento')->with('sucesso','Orçamento deletado com sucesso!');;
 
 
     }

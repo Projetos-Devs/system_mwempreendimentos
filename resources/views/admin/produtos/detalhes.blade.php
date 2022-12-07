@@ -9,6 +9,12 @@
 
     <h1 class="pt-4 mb-4">Produtos</h1>
 
+    @if (Session::get('sucesso'))
+
+            <div class="alert alert-success text-center">{{ Session::get('sucesso') }}</div>
+            
+        @endif
+
     <a href="{{ route('produtos.create') }}"class="btn btn-primary position-absolute top-0 end-0 m-4 rounded-circle fs-4" 
     title="cadastrar produto"><i class="bi bi-plus"></i></a>
 

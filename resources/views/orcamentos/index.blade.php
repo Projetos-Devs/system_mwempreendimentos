@@ -16,6 +16,12 @@
 
     <div class="container" style="margin-top: -60px">
 
+        @if (Session::get('sucesso'))
+
+            <div class="alert alert-success text-center">{{ Session::get('sucesso') }}</div>
+            
+        @endif
+        
         <div class="text-white rounded-4 shadow-lg p-1 m-2 mt-4 mb-4"
             style="background-color: #2D2D3C; text-align: center;">
             <h2>Orçamento</h2>

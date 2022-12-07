@@ -10,6 +10,11 @@
         <h2 class="text-center bold" style="color: white;">Orçamentos</h2>
     </div>
 
+    @if (Session::get('sucesso'))
+
+            <div class="alert alert-success text-center">{{ Session::get('sucesso') }}</div>
+            
+        @endif
 
     @if ($orcamentos->count() == 0)
 
@@ -33,6 +38,7 @@
                     <a href="{{ route('orcamentos.destroyorcamento', $orcamento->id) }}" class="btn btn-danger " title="Excluir"
                         data-bs-toggle="modal" data-bs-target="#modal-deletar-{{ $orcamento->id }}">
                         <i class="bi bi-trash"></i></i></a>
+                        
                         @include('admin.orcamentos.delete')
                     </div>
 

@@ -53,7 +53,7 @@
                         <label for="quantidade">Quantidade</label>
                         <input type="text" class="form-control" name="quantidade_estoque" id="quantidade_quantidade" value="{{$produto->quantidade_estoque}}" required>
                     </div>
-
+                    
                     <div class="mb-3">
                         <label for="foto" class="form-label">Foto</label>
                         <input type="file" name="foto" class="form-control form-control-lg bg-light" value="">

@@ -95,7 +95,7 @@ class OrcamentoController extends Controller
     
         Orcamento::create($input);
 
-        return redirect()->route('orcamentos.index');
+        return redirect()->route('orcamentos.index')->with('sucesso', 'Orçamento Realizado com sucesso! Entraremos em contato');;
     }
 
     

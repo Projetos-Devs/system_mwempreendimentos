@@ -51,7 +51,15 @@ class ProdutosController extends Controller
     {
        $input = $request->toArray();
        $produto = Produto::find($id);
- 
+       
+       if(!empty($input['foto']) && $input['foto']->isValid())
+        {
+            Storage::delete('public/produtos/'.$produto['foto']);
+            $nomeArquivo = $input['foto']->hashName(); //Obtém a hash do nome do arquivo 
+            $input['foto']->store('public/produtos'); //upload da foto em uma pasta
+            $input['foto'] = $nomeArquivo; // Guardar o nome do arquivo
+        }
+
        $produto->fill($input);
        $produto->save();
        return redirect()->route('produtos.detalhes')->with('sucesso', 'Produto alterado com sucesso');
@@ -78,7 +86,7 @@ class ProdutosController extends Controller
 
         Produto::create($input);
 
-        return redirect()->route('produtos.detalhes');
+        return redirect()->route('produtos.detalhes')->with('sucesso', 'Produto cadastrado com sucesso');
 
 
     }
@@ -87,7 +95,7 @@ class ProdutosController extends Controller
     public function destroy($id){
         $produto = Produto::find($id);
         $produto->delete();
-        return redirect()->route('produtos.detalhes');
+        return redirect()->route('produtos.detalhes')->with('sucesso','Produto deletado com sucesso!');
     }
 
 }
