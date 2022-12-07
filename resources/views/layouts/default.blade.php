@@ -80,7 +80,7 @@
     </div>
 
 
-    <footer class="mt-5 text-center text-white pb-5">
+    <footer class="mt-5 text-center text-white pt-4 pb-5">
         <span>
             Sistema desenvolvido na disciplina de Programação Avançada do curso de Sistema de Informação<br>
             Semestre letivo: 2022.2<br>

@@ -14,7 +14,7 @@
             </div>
     </div>
 
-    <div class="container border border-2 pt-1 pb-1 p-5 rounded-4 mb-4 shadow" style="background-color: #2D2D3C; margin-top: -70px;">
+    <div class="container border border-2 pt-1 pb-1 p-5 rounded-4 mb-4 shadow" style="background-color: #2D2D3C; margin-top: -100px;">
         <h2 class="fs-1 text-center text-light">Conheça nossos serviços</h2>
     </div>
 

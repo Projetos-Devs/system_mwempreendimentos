@@ -112,9 +112,9 @@
                         @endforeach
                     </div>
 
+                    <hr style="color: white">
 
-
-                    <div class="mb-2 mt-4 pb-3 container text-center">
+                    <div class="mb-2 mt-2 pb-3 container text-center">
 
                         <div class="row">
 

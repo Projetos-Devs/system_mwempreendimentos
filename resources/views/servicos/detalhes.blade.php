@@ -5,7 +5,7 @@
 @section('conteudo')
 
 
-    <div style="position:relative; margin-bottom: -70px;">
+    <div style="position:relative; margin-bottom: -100px;">
         <img class="w-100" style="height: 370px; margin-top: -50px; object-fit: cover; filter: brightness(55%);"
             src="/storage/produtos/{{$produto->foto}}">
 
@@ -47,7 +47,7 @@
           </form>
             
 
-            <hr style="color: white;" >
+            {{-- <hr style="color: white;" >
 
             <div class="mb-3">
                 <p class="fw-bold text-start" style="color: white;">Imagens</p>
@@ -81,7 +81,7 @@
             
             <hr style="color: white;" > 
             
-            <hr style="color: white;" >
+            <hr style="color: white;" > --}}
 
             
     
