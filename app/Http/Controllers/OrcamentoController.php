@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Cliente;
+//use App\Models\Cliente;
 use App\Models\Produto;
 use App\Models\Municipio;
 use App\Models\Orcamento;
@@ -28,12 +28,12 @@ class OrcamentoController extends Controller
 
     public function index(Request $request)
     {
-        $clientes = Cliente::all();
+//$clientes = Cliente::all();
         $municipios = Municipio::all()->sortBy('nome');
         $ufs = Uf::all()->sortBy('sigla');
         $produtos = Produto::all()->sortBy('nome');
         
-        return view('orcamentos.index', compact('municipios', 'ufs', 'produtos', 'clientes'));
+        return view('orcamentos.index', compact('municipios', 'ufs', 'produtos'));
     }
 
 

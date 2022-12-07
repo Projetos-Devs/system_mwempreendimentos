@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Cliente;
+//use App\Models\Cliente;
 use App\Models\Municipio;
 use App\Models\Orcamento;
 use App\Models\Produto;
@@ -27,30 +27,29 @@ class AdminController extends Controller
 
    public function index()
    {
-      $totalClientes = Cliente::all()->count();
+      //$totalClientes = Cliente::all()->count();
       $totalOrcamentos = Orcamento::all()->count();
       $totalProdutos = Produto::all()->count();
-      return view('admin.dashboards.index', compact('totalClientes', 'totalOrcamentos', 'totalProdutos'));
+      return view('admin.dashboards.index', compact( 'totalProdutos', 'totalOrcamentos'));
    }
 
-   public function detalhescliente()
-    {
+   // public function detalhescliente()
+   //  {
        
     
-       $clientes = Cliente::all()->sortBy('nome');
+   //     $clientes = Cliente::all()->sortBy('nome');
  
-       return view('admin.clientes.detalhes', compact('clientes'));
-    }
+   //     return view('admin.clientes.detalhes', compact('clientes'));
+   //  }
 
 
     public function detalhesorcamento()
     {
  
-       $clientes = Cliente::all();
        $orcamentos = Orcamento::all()->sortBy('status');
        $totalOrcamentos = Orcamento::all()->count();
  
-       return view('admin.orcamentos.detalhes', compact('clientes', 'orcamentos', 'totalOrcamentos'));
+       return view('admin.orcamentos.detalhes', compact( 'orcamentos', 'totalOrcamentos'));
     }
 
 
@@ -61,9 +60,9 @@ class AdminController extends Controller
        $municipios = Municipio::all();
        $produtos = Produto::all();
         $ufs = Uf::all();
-        $clientes = Cliente::all();
+        //$clientes = Cliente::all();
         $orcamento = Orcamento::find($id);
-       return view('admin.orcamentos.edit', compact('orcamento', 'clientes', 'municipios', 'ufs', 'produtos'));
+       return view('admin.orcamentos.edit', compact('orcamento', 'municipios', 'ufs', 'produtos'));
         
     }
     
@@ -77,7 +76,7 @@ class AdminController extends Controller
        
        $orcamento->fill($input);
        $orcamento->save();
-       return redirect()->route('orcamentos.detalhes')->with('sucesso', 'Orçamento alterado com sucesso');
+       return redirect()->route('orcamentos.detalhesorcamento')->with('sucesso', 'Orçamento alterado com sucesso');
         
     }
 
@@ -87,7 +86,7 @@ class AdminController extends Controller
         
         $orcamento = Orcamento::find($id);
         $orcamento->delete();
-        return redirect()->route('orcamentos.detalhes');
+        return redirect()->route('orcamentos.detalhesorcamento');
 
 
     }

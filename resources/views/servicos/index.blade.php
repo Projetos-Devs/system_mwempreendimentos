@@ -16,39 +16,18 @@
     <div class="container">
         <div class="row">
 
-            <div class="col-4 text-center p-2 d-flex align-items-stretch">
-                <div class="rounded-4 bg-dark p-3" style="max-height: 500px;">
+            @foreach ( $produtos as $produto)
+            
+            <div class="col-4 text-center p-2 d-flex align-items-stretch" style="width: 250px;">
+                <div class="container-fluid rounded-4 bg-dark p-3">
                     <div class="align-middle">
-                        <img src="/images/banheiro_quimico.jpg" class="figure-img img-fluid" alt="banheiro">
+                        <img src="/storage/produtos/{{ $produto->foto }}" alt="{{ $produto->nome }}" class="figure-img img-fluid" style="width: 200px; height:150px;" alt="banheiro">
                     </div>
-                    <p class="text-light text-break">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
-            <div class="col-4 text-center p-2 d-flex align-items-stretch">
-                <div class="rounded-4 bg-dark p-3" style="max-height: 500px;">
-                    <div class="align-middle">
-                        <img src="/images/camarim.jpg" class="figure-img img-fluid" alt="banheiro">
-                    </div>
-                    <p class="text-light text-break">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
-            <div class="col-4 text-center p-2 d-flex align-items-stretch">
-                <div class="rounded-4 bg-dark p-3" style="max-height: 500px;">
-                    <div class="align-middle">
-                        <img src="/images/diciplinadores.jpg" class="figure-img img-fluid" alt="banheiro">
-                    </div>
-                    <p class="text-light text-break">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
-            <div class="col-4 text-center p-2 d-flex align-items-stretch">
-                <div class="rounded-4 bg-dark p-3" style="max-height: 500px;">
-                    <div class="align-middle">
-                        <img src="/images/foto_aluminio_p30.jpg" class="figure-img img-fluid" alt="banheiro">
-                    </div>
-                    <p class="text-light text-break">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="text-light text-break">{{$produto->nome}}</p>
                 </div>
             </div>
             
+            @endforeach
             
            
             

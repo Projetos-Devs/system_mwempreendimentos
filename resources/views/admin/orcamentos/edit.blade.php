@@ -18,19 +18,29 @@
 
                 @csrf
                 @method('PUT')
-                @foreach ($clientes as $cliente)
-                    <input type="hidden" value="{{ $cliente->id }}" name="id_cliente">
-                @endforeach
-
-                @foreach ($users as $user)
-                    <input type="hidden" value="{{ $user->id }}" name="id_user">
-                @endforeach
                 <input type="hidden" value="andamento" name="status">
                 <div class="row m-2">
 
                     <div class="form-group col-6">
+                        <label for="tipo_evento">Nome do Responsável</label>
+                        <input type="text" class="form-control" name="nome_cliente" id="nome_cliente" value="{{$orcamento->nome_cliente}}" required>
+                    </div>
+                    <div class="form-group col-6">
+                        <label for="tipo_evento">Nome da Empresa</label>
+                        <input type="text" class="form-control" name="nome_empresa" id="nome_empresa" value="{{$orcamento->nome_empresa}}">
+                    </div>
+                    <div class="form-group col-6">
+                        <label for="tipo_evento">Email</label>
+                        <input type="text" class="form-control" name="email" id="email" value="{{$orcamento->email}}" required>
+                    </div>
+                    <div class="form-group col-6">
+                        <label for="tipo_evento">Telefone</label>
+                        <input type="text" class="form-control" name="telefone" id="telefone" value="{{$orcamento->telefone}}" required>
+                    </div>
+
+                    <div class="form-group col-6">
                         <label for="tipo_evento">Tipo do Serviço</label>
-                        <input type="text" class="form-control" name="tipo_evento" id="tipo" value="{{$orcamento->tipo_evento}} " required>
+                        <input type="text" class="form-control" name="tipo_evento" id="tipo" value="{{$orcamento->tipo_evento}}" required>
                     </div>
 
                     <div class="form-group col-6">
@@ -96,17 +106,24 @@
                     </div>
 
 
+                    <div class="mt-5 form-group col-3 mb-5">
+                        <label class="form-label" for="status">Status do Orçamento</label>
+                        <select class="form-select" id="status" name="status" required>
+                            <option value="">--</option>
+                            <option value="andamento" @selected($orcamento->status == 'andamento')>Andamento</option>
+                            <option value="cancelado" @selected($orcamento->status == 'cancelado')>Cancelado</option>
+                            <option value="finalizado" @selected($orcamento->status == 'finalizado')>Finalizado</option>
+                        </select>
+                    </div>
 
                     <div class="mb-2 mt-4 pb-3 container text-center">
 
                         <div class="row">
-
                             <div class="col text-end">
-                                <a href="{{ route('orcamentos.detalhesorcamento') }}" class="btn btn-danger btn-lg col-md-3">Cancelar</a>
+                                <a href="{{ route('orcamentos.detalhesorcamento') }}" class="btn btn-danger btn-lg col-md-4">Cancelar</a>
                             </div>
-
                             <div class="col text-start">
-                                <button type="submit" class="btn btn-lg col-md-3"
+                                <button type="submit" class="btn btn-lg col-md-4"
                                     style="background-color: #5EB7CB">Alterar</button>
                             </div>
                         </div>

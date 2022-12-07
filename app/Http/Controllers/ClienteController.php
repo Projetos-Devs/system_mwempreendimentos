@@ -22,30 +22,30 @@ class ClienteController extends Controller
 
     
 
-    public function index(Request $request)
-    {
+    // public function index(Request $request)
+    // {
 
-        return view('clientes.index');
+    //     return view('clientes.index');
 
-    }
+    // }
 
-    public function create()
-    {
+    // public function create()
+    // {
 
-        return view('clientes.create');
+    //     return view('clientes.create');
 
-    }
+    // }
     
 
 
-    public function store(Request $request){
+    // public function store(Request $request){
 
-        $input = $request->toArray(); // Recebe um array com os campos do formulário
+    //     $input = $request->toArray(); // Recebe um array com os campos do formulário
     
-        Cliente::create($input);
+    //     Cliente::create($input);
 
-        return redirect()->route('orcamentos.index');
+    //     return redirect()->route('orcamentos.index');
 
 
-    }
+    // }
 }

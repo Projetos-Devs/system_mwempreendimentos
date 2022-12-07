@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('orcamentos', function (Blueprint $table) {
             $table->id();
+            $table->string('nome_cliente');
+            $table->string('nome_empresa')->nullable();
+            $table->string('email');
+            $table->string('telefone');
             $table->string('tipo_evento');
             $table->string('endereco');
             $table->date('data_inicio');
@@ -29,11 +33,6 @@ return new class extends Migration
             $table->foreign('id_municipio')->references('id')->on('municipios')
                 ->onUpdate('restrict')->onDelete('restrict');
                 
-            $table->unsignedBigInteger('id_cliente');
-            $table->foreign('id_cliente')->references('id')->on('clientes')
-                ->onUpdate('restrict')->onDelete('restrict');
-
-
             $table->timestamps();
         });
     }

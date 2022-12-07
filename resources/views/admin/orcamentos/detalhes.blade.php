@@ -24,7 +24,7 @@
                     <div class="row mb-2">
 
                     <div class="col-5 p-3 pt-4 text-start">
-                    <h2 class="text-middle">Nome do Cliente: {{ $orcamento->cliente->nome }}</h2><br>
+                    <h2 class="text-middle">Nome do Cliente: {{ $orcamento->nome_cliente }}</h2><br>
                     </div>
 
                     <div class="col-7 p-3 pt-4 text-end" >
@@ -41,9 +41,9 @@
 
                     <div class="row">
 
-                        <h3 class="mb-5">Tipo do Evento: {{ $orcamento->tipo_evento }}</h3>
-                        <h3 class="col-sm-6 mt-2">Data de Inicio: {{ date( 'd/m/Y' , strtotime($orcamento->data_inicio)) }}</h3><br>
-                        <h3 class="col-sm-6 mt-2">Data de Término: {{ date( 'd/m/Y' , strtotime($orcamento->data_fim)) }}</h3><br>
+                        <h3 class="mt-2">Tipo do Evento: {{ $orcamento->tipo_evento }}</h3>
+                        <h3 class="col-sm-6 mt-4">Data de Inicio: {{ date( 'd/m/Y' , strtotime($orcamento->data_inicio)) }}</h3><br>
+                        <h3 class="col-sm-6 mt-4">Data de Término: {{ date( 'd/m/Y' , strtotime($orcamento->data_fim)) }}</h3><br>
                         <h3 class="col-sm-6 mt-4">Cidade: {{ $orcamento->municipio->nome }}</h3>
                         <h3 class="col-sm-6 mt-4">Estado: {{ $orcamento->uf->sigla }}</h3><br>
 
@@ -72,6 +72,35 @@
 
                             <summary>Mais Informações</summary>
 
+                            <h3 class="mt-4 text-center">Nome da Empresa:</h3>
+
+                            @if ($orcamento->nome_empresa == null)
+
+                            <p class="mt-4 px-3 fs-4 text-center">Não possui!!</p>
+                                
+                            @else
+
+                            <div class="container" style="width: 500px;">
+                                <p class="mt-4 px-3 fs-4 text-center">{{ $orcamento->nome_empresa }}</p>
+                                </div>
+
+                            @endif
+
+                
+
+                        <h3 class="mt-4 text-center">Email:</h3>
+
+                        <div class="container" style="width: 500px;">
+                        <p class="mt-4 px-3 fs-4 text-center">{{ $orcamento->email }}</p>
+                        </div>
+
+
+                        <h3 class="mt-4 text-center">Telefone:</h3>
+
+                        <div class="container" style="width: 500px;">
+                        <p class="mt-4 px-3 fs-4 text-center">{{ $orcamento->telefone }}</p>
+                        </div>
+
                             <h3 class="mt-4 text-center">Localização do evento:</h3><br>
 
                             <div class="container" style="width: 500px;">
@@ -82,7 +111,7 @@
                             
                             @if ($orcamento->descricao == null)
 
-                            <h5 class="mb-3">Não possui!!</h5>
+                            <h5 class="mt-4 px-3 fs-4 text-center">Não possui!!</h5>
                                 
                             @else
 

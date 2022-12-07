@@ -28,12 +28,12 @@
         style=" width: 400px; margin-top: 30px; background-color: #2D2D3C;">
 
         @if (Session::get('erro'))
-        <div class="alert alert-danger text-center p-2">{{ Session::get('erro') }}</div>
+        <div class="alert alert-danger text-center p-2 mt-3">{{ Session::get('erro') }}</div>
         @endif
     
         @if ($errors->any())
             @foreach ($errors->all() as $error)
-                <div class="alert alert-warning text-center p-2">{{ $error }}</div>
+                <div class="alert alert-warning text-center p-2 mt-3">{{ $error }}</div>
             @endforeach
         @endif
 

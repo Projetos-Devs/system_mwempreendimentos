@@ -20,7 +20,9 @@
 
                 @csrf
                 @method('PUT')
-                <input type="hidden" value="1" name="id_user">
+                @foreach ($users as $user)
+                <input type="hidden" value="{{$user->id}}" name="id_user">
+                @endforeach
                 <div class="row m-2">
 
                     <div class="form-group col-6">
@@ -31,6 +33,11 @@
                     <div class="form-group col-6">
                         <label for="descricao">Descrição do Produto</label>
                         <input name="descricao" id="descricao" type="text" class="form-control" value="{{$produto->descricao}}" required>
+                    </div>
+
+                    <div class="form-group col-6">
+                        <label for="descricao">Informações sobre Produto</label>
+                        <textarea name="produto_info" id="produto_info" class="form-control" aria-valuetext="{{$produto->produto_info}}" required>{{$produto->produto_info}}</textarea>
                     </div>
 
                     <div class="form-group col-6 mb-5">
@@ -45,6 +52,11 @@
                     <div class="form-group col-6 mb-4">
                         <label for="quantidade">Quantidade</label>
                         <input type="text" class="form-control" name="quantidade_estoque" id="quantidade_quantidade" value="{{$produto->quantidade_estoque}}" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="foto" class="form-label">Foto</label>
+                        <input type="file" name="foto" class="form-control form-control-lg bg-light" value="">
                     </div>
 
 

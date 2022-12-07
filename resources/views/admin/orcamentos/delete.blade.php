@@ -10,7 +10,7 @@
           
           <div class="text-black text-center">
           <p>Deseja realmente deletar o orçamento do cliente</p>
-          <p><strong>{{ $orcamento->cliente->nome}} ?</strong></p>
+          <p><strong>{{ $orcamento->nome_cliente}} ?</strong></p>
         </div>
         </div>
         <div class="modal-footer">

@@ -16,7 +16,7 @@
             <div class="bg-success shadow p-3 text-center text-white">
                 <i class="bi bi-people-fill fs-1"></i>
                 <h2 class="fs-4">Clientes</h2>
-                <h3 class="fs-1">{{ $totalClientes }}</h3>
+                <h3 class="fs-1">{{ $totalOrcamentos }}</h3>
             </div>
         </div>
     

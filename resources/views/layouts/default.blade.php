@@ -48,7 +48,7 @@
                     </li>
 
                     <li class="nav-item px-3">
-                        <a class="nav-link text-white" href="{{ route('clientes.index') }}">Orçamento</a>
+                        <a class="nav-link text-white" href="{{ route('orcamentos.index') }}">Orçamento</a>
                     </li>
                     <li class="nav-item px-3">
                         <a class="nav-link text-white" href="{{ route('contatos.index') }}">Contato</a>

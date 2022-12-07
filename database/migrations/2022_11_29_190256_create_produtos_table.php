@@ -17,8 +17,10 @@ return new class extends Migration
             $table->id();
             $table->string('nome');
             $table->string('descricao');
+            $table->string('produto_info');
             $table->enum('tipo', ['estruturas', 'maquinas']);
             $table->integer('quantidade_estoque');
+            $table->string('foto');
 
             $table->unsignedBigInteger('id_user');
             $table->foreign('id_user')->references('id')->on('users')

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Produto;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -28,8 +29,9 @@ class ProdutosController extends Controller
  
     public function create()
     {
+        $users = User::all();
        $produtos = Produto::all()->sortBy('nome');
-       return view('admin.produtos.create', compact('produtos'));
+       return view('admin.produtos.create', compact('produtos', 'users'));
  
        return redirect()->route('produtos.detalhes')->with('sucesso', 'Produto cadastrado com sucesso');
     }
@@ -38,8 +40,9 @@ class ProdutosController extends Controller
  
     public function edit($id)
     {
+        $users = User::all();
        $produto = Produto::find($id);
-       return view('admin.produtos.edit', compact('produto'));
+       return view('admin.produtos.edit', compact('produto', 'users'));
  
     }
  
@@ -60,6 +63,18 @@ class ProdutosController extends Controller
     public function store(Request $request){
 
         $input = $request->toArray(); // Recebe um array com os campos do formulário
+
+        $input = $request->toArray(); // Recebe um array com os campos do formulário
+        if(!empty($input['foto'] && $input['foto']->isValid()))
+        {
+            $nomeArquivo = $input['foto']->hashName(); //Obtém a hash do nome do arquivo 
+            $input['foto']->store('public/produtos'); //upload da foto em uma pasta
+            $input['foto'] = $nomeArquivo; // Guardar o nome do arquivo
+        }else{
+            $input['foto'] = null;
+        }
+
+
 
         Produto::create($input);
 

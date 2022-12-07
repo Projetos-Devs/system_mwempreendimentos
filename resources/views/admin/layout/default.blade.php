@@ -34,21 +34,12 @@
                             <li><a class="dropdown-item" href="{{ route('produtos.detalhes') }}">Listar Produtos</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item px-3">
+                    {{-- <li class="nav-item px-3">
                         <a class="nav-link" href="{{route('clientes.detalhescliente')}}">Clientes</a>
-                    </li>
+                    </li> --}}
                     <li class="nav-item px-3">
                         <a class="nav-link" href="{{route('orcamentos.detalhesorcamento')}}">Orçamentos</a>
                     </li>
-
-                    @can('acessar-usuarios')
-                    <li class="nav-item px-3 dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Usuários</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="{{ route('usuarios.create') }}">Cadastrar novo usuário</a></li>
-                        </ul>
-                    </li>
-                    @endcan
                     <li class="nav-item px-3 dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Olá {{auth()->user()->name }}</a>
                         <ul class="dropdown-menu">

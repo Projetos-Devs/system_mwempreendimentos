@@ -20,7 +20,9 @@
             <form method="POST" action="{{route('produtos.store')}}" enctype="multipart/form-data">
 
                 @csrf
-                <input type="hidden" value="1" name="id_user">
+                @foreach ($users as $user)
+                <input type="hidden" value="{{$user->id}}" name="id_user">
+                @endforeach
                 <div class=" row m-2">
 
                     <div class="form-group col-6">
@@ -33,7 +35,14 @@
                         <input name="descricao" id="descricao" type="text" class="form-control" required>
                     </div>
 
-                    <div class="form-group col-6 mb-5">
+                    <div class="form-group col-6 mt-2">
+                        <label for="descricao">Informações sobre Produto</label>
+                        <textarea name="produto_info" id="produto_info" class="form-control" 
+                        placeholder="Este Campo serve para adicionar informações sobre os produtos para os clientes vizualizarem na tela de produtos" required></textarea>
+                    </div>
+
+
+                    <div class="form-group col-6 mb-5 mt-2">
                         <label for="tipo">Tipo</label>
                         <select class="form-select" id="tipo" name="tipo" required>
                             <option value="">--</option>
@@ -47,6 +56,11 @@
                         <input type="text" class="form-control" name="quantidade_estoque" id="quantidade_estoque" required>
                     </div>
 
+                    <div class="mb-3">
+                        <label for="foto" class="form-label">Foto</label>
+                        <input type="file" name="foto" class="form-control form-control-lg bg-light" value=""
+                            required>
+                    </div>
 
                     <div class="pb-4">
                         <a href="{{ route('produtos.detalhes') }}" class="btn btn-danger btn-lg col-md-2" style="margin-left: 325px;">Cancelar</a>

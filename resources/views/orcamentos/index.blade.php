@@ -26,13 +26,25 @@
             <form method="POST" action="{{ route('orcamentos.store') }}" enctype="multipart/form-data">
 
                 @csrf
-
-                @foreach ($clientes as $cliente)
-                    <input type="hidden" value="{{ $cliente->id }}" name="id_cliente">
-                @endforeach
                 <input type="hidden" value="andamento" name="status">
                 <div class="row m-2">
 
+                    <div class="form-group col-6">
+                        <label for="tipo_evento">Nome do Responsável</label>
+                        <input type="text" class="form-control" name="nome_cliente" id="nome_cliente" required>
+                    </div>
+                    <div class="form-group col-6">
+                        <label for="tipo_evento">Nome da Empresa</label>
+                        <input type="text" class="form-control" name="nome_empresa" id="nome_empresa">
+                    </div>
+                    <div class="form-group col-6">
+                        <label for="tipo_evento">Email</label>
+                        <input type="text" class="form-control" name="email" id="email" required>
+                    </div>
+                    <div class="form-group col-6">
+                        <label for="tipo_evento">Telefone</label>
+                        <input type="text" class="form-control" name="telefone" id="telefone" required>
+                    </div>
                     <div class="form-group col-6">
                         <label for="tipo_evento">Tipo do Serviço</label>
                         <input type="text" class="form-control" name="tipo_evento" id="tipo" required>
@@ -107,7 +119,7 @@
                         <div class="row">
 
                             <div class="col text-end">
-                                <a href="{{ route('clientes.index') }}" class="btn btn-danger btn-lg col-md-3">Cancelar</a>
+                                <a href="{{ route('home.index') }}" class="btn btn-danger btn-lg col-md-3">Cancelar</a>
                             </div>
 
                             <div class="col text-start">
