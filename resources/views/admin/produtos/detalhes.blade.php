@@ -19,7 +19,7 @@
                 <th>Fotos</th>
                 <th>Nome</th>
                 <th>Descrição do produto</th>
-                <th>Informações do produto</th>
+                {{-- <th>Informações do produto</th> --}}
                 <th>Tipo</th>
                 <th>Quantidade</th>
                 <th>Ação</th>
@@ -45,9 +45,9 @@
                             width="100" height="110"></td>
                         <td class="align-middle">{{ $produto->nome }}</td>
                         <td class="align-middle">{{ $produto->descricao }}</td>
-                        <td class=" text-break">
+                        {{-- <td class=" text-break">
                            <div class="align-middle px-2" style="width: 350px;">{{ $produto->produto_info }}</div> 
-                        </td>
+                        </td> --}}
                         <td class="align-middle">{{ $produto->tipo }}</td>
                         <td class="align-middle">{{ $produto->quantidade_estoque }}</td>
                         <td class="align-middle text-center">

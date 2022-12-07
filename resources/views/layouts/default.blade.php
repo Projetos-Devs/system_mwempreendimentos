@@ -50,12 +50,9 @@
                     <li class="nav-item px-3">
                         <a class="nav-link text-white" href="{{ route('orcamentos.index') }}">Orçamento</a>
                     </li>
-                    <li class="nav-item px-3">
+                    {{-- <li class="nav-item px-3">
                         <a class="nav-link text-white" href="{{ route('contatos.index') }}">Contato</a>
-                    </li>
-                    <li class="nav-item px-3">
-                        <a class="nav-link text-white" href="">Ajuda</a>
-                    </li>
+                    </li> --}}
 
 
                 </ul>
