@@ -56,7 +56,7 @@
                         <a class="nav-link text-white" href="{{ route('home.index') }}">Home</a>
                     </li>
                     <li class="nav-item px-3">
-                        <a class="nav-link text-white" href="">Sobre</a>
+                        <a class="nav-link text-white" href="{{ route('sobre.index') }}">Sobre</a>
                     </li>
                     <li class="nav-item px-3">
                         <a class="nav-link text-white" href="{{route('servicos.index')}}" role="button">Produtos</a>

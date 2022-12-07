@@ -8,6 +8,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\OrcamentoController;
 use App\Http\Controllers\ProdutosController;
 use App\Http\Controllers\ServicoController;
+use App\Http\Controllers\SobreController;
 use App\Http\Controllers\ServicosController;
 use App\Http\Controllers\UsuarioController;
 use Illuminate\Support\Facades\Route;
@@ -115,3 +116,7 @@ Route::get('/servicos', [ServicoController::class, 'index'])->name('servicos.ind
 Route::get('/servicos/detalhes/{id}', [ServicoController::class, 'detalhes'])->name('servicos.detalhes');
 
 Route::put('/servicos/produto/{id}', [ServicoController::class, 'update'])->name('servicos.update');
+
+//ROTAS DE SOBRE
+
+Route::get('/sobre', [SobreController::class, 'index'])->name('sobre.index');
