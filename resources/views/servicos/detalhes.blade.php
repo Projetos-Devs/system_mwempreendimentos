@@ -17,7 +17,7 @@
 
 
 
-    <div class="container border border-2  pt-1 pb-1 p-5 rounded-4 bg-dark mb-5 mt-4 shadow">
+    <div class="container border border-2  pt-1 pb-5 p-5 rounded-4 bg-dark mb-5 mt-4 shadow">
             
       <form method="POST" action="{{ route('servicos.update', $produto->id) }}" enctype="multipart/form-data">
 

@@ -126,6 +126,11 @@
                                     <p class="pt-1 px-4 fs-5 text-center text-break text-capitalize">{{ $orcamento->produtos }}</p>
                              </div>
 
+                             <div class="mt-2 text-end">
+                                <a href="https://wa.me/{{$orcamento->telefone}}" target="_blank"><img src="/images/layout/whatsapp1.png" width="50px;" height="50px;" title="Contate pelo whatsapp"></a>
+                                <a href="mailto:{{$orcamento->email}}" target="_blank"><img src="/images/layout/gmail.png" width="55px;" height="50px;" title="Contate pelo email"></a>
+                             </div>
+
                         </details>
 
                     </div>

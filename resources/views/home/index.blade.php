@@ -6,8 +6,8 @@
 <div class="" style="margin-top:-49px; max-width: 100%; position:relative;">
     <img src="images/layout/image.png" class="" style="max-width: 100%" alt="">
 </div>
-<div class="text-light p-4" style="background-color: #181818;">
-    <h1>Bem Vindo ao Site MWEmpreendimentos</h1>
+<div class="text-black p-4 mt-2 mb-2" >
+    <h1>Bem vindo ao Site <br> MWEmpreendimentos</h1>
 </div>
 <div class="bg-dark">
     <div class="container text-light">
@@ -61,5 +61,5 @@
     </div>
     
 </div>
-<a href="{{route('dashboards.index')}}">Área do Admin</a><br>
+
 @endsection 
