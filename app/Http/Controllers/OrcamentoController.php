@@ -83,15 +83,31 @@ class OrcamentoController extends Controller
     {
         $input = $request->toArray(); // Recebe um array com os campos do formulário
 
-        $listaProdutos = '<ul>';
+        $listaProdutos = '';
+        $listaqtds = '';
 
-        foreach($input['produtos'] AS $produtos){
-            $listaProdutos .= "<li>".$produtos." - Qtd: </li>";
+        
+        foreach($input['qtds'] AS $qtds){
+
+            $listaqtds .= "".$qtds;
+       
+    }
+    
+
+        foreach($input['produtos'] AS $produtos ){
+
+        
+            $listaProdutos .= "".$produtos." - Qtd: $listaqtds ;";
+
+
         }
 
-        $listaProdutos .= '</ul>';
+
+        $listaProdutos .= '';
+
 
         $input['produtos'] = $listaProdutos;
+        $input['qtds'] = $listaqtds;
     
         Orcamento::create($input);
 

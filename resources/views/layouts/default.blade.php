@@ -10,6 +10,9 @@
     <link rel="shortcut icon" href="/images/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="/css/icons/bootstrap-icons.css">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+
 
 
     <style type="text/css">
@@ -46,6 +49,7 @@
 
 <body class="bg-light">
 
+
     <nav class="navbar navbar-expand-lg mb-5 pb-3">
         <div class="container pt-2">
             <a href="{{ route('home.index') }}"><img src="/images/logo_white.png" height="50"
@@ -74,6 +78,7 @@
             </div>
         </div>
     </nav>
+
 
     <div class="mb-3">
         @yield('conteudo')

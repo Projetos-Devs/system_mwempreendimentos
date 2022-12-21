@@ -14,7 +14,7 @@
         </div>
     </div>
 
-    <div class="container" style="margin-top: -60px">
+    <div class="container" style="margin-top: -75px">
 
         @if (Session::get('sucesso'))
 
@@ -22,7 +22,7 @@
             
         @endif
         
-        <div class="text-white rounded-4 shadow-lg p-1 m-2 mt-4 mb-4"
+        <div class="text-white rounded-4 shadow-lg p-1 m-2 mb-4"
             style="background-color: #2D2D3C; text-align: center;">
             <h2>Orçamento</h2>
         </div>
@@ -107,7 +107,7 @@
                                 <div>
                                     <input style="margin-right: 13px; margin-bottom: 20px;" type="checkbox"
                                         name="produtos[]" value="{{ $produto->nome }}">{{ $produto->nome }}
-                                    <select name="qtd[]">
+                                    <select name="qtds[]">
                                         <option value="">--</option>
                                         @for ($cont = 1; $cont <= $produto->quantidade_estoque; $cont++)
                                             <option value="{{ $cont }}">{{ $cont }}</option>

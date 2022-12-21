@@ -94,7 +94,7 @@
                                 <div>
                                     <input style="margin-right: 13px; margin-bottom: 20px;" type="checkbox"
                                         name="produtos[]" value="{{ $produto->nome }}">{{ $produto->nome }}
-                                    <select name="qtd[]">
+                                    <select name="qtds[]">
                                         <option value="">--</option>
                                         @for ($cont = 1; $cont <= $produto->quantidade_estoque; $cont++)
                                             <option value="{{ $cont}}">{{ $cont }}</option>

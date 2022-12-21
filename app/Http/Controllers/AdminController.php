@@ -73,6 +73,28 @@ class AdminController extends Controller
 
         $input = $request->toArray();
        $orcamento = Orcamento::find($id);
+
+       $listaProdutos = '';
+        $listaqtds = '';
+
+        foreach($input['qtds'] AS $qtds) {
+            $listaqtds .= "".$qtds."";
+            
+        }
+        
+
+        foreach($input['produtos'] AS $produtos){
+            $listaProdutos .= "".$produtos." - Qtd: $listaqtds ;";
+
+        }
+
+
+        $listaProdutos .= '';
+        $listaqtds .= '';
+
+        $input['produtos'] = $listaProdutos;
+        $input['qtds'] = $listaqtds;
+    
        
        $orcamento->fill($input);
        $orcamento->save();
