@@ -53,8 +53,8 @@
   }
   
   .item {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     flex-shrink: 0;
     transition: all 600ms ease-in-out;
     opacity: 0.5;
@@ -76,26 +76,6 @@
   .gallery-wrapper {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
-  }
-  
-  .cyan {
-    background: cyan;
-  }
-  
-  .deeppink {
-    background: deeppink;
-  }
-  
-  .turquoise {
-    background: turquoise;
-  }
-  
-  .darkblue {
-    background: darkblue;
-  }
-  
-  .purple {
-    background: purple;
   }
   
 
@@ -120,4 +100,40 @@
 #carouselproject {
     width: 100%;
     height: 400px;
+}
+
+
+#whatsapp{
+
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  border-radius: 50px;
+  background-color: #25d366;
+  color: #fff;
+  text-align: center;
+  font-size: 30pt;
+  box-shadow: 1px 2px 2px #888;
+  z-index: 1000;
+  transition: all 600ms ease-in-out;
+}
+
+#whatsapp:hover{
+
+  background-color: #fff;
+  color: #25d366;
+  transition: all 600ms ease-in-out;
+}
+
+
+.menu li a{
+  border-bottom: 5px #0090 solid;
+  transition: all .2s linear;
+}
+
+.menu li a:hover{
+  border-bottom: 5px #fff solid;
+  transition: all .2s linear;
 }

@@ -28,17 +28,17 @@
 
         }
 
-        #imghover{
+        #imagehover{
 
-            transition-property: all;
-            transition-duration: 0.5s;
+            transition: all 400ms ease-in-out;
+            filter: none;
+
         }
 
 
         #imagehover:hover{
 
-            transition-property: all;
-            transition-duration: 0.5s;
+            transition: all 400ms ease-in-out;
             filter: brightness(55%);
         }
 
@@ -51,11 +51,11 @@
 
 
     <nav class="navbar navbar-expand-lg mb-5 pb-3">
-        <div class="container pt-2">
+        <div class="container pt-3">
             <a href="{{ route('home.index') }}"><img src="/images/logo_white.png" height="50"
                     alt="MWEmpreendimentos"></a>
             <div class="collapse navbar-collapse">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav menu">
                     <li class="nav-item px-3">
                         <a class="nav-link text-white" href="{{ route('home.index') }}">Home</a>
                     </li>
@@ -94,6 +94,9 @@
         </span>
     </footer>
 
+    <a class="text-black" href="https://web.whatsapp.com/send?phone=5575991946535" target="_blank">
+    <i class="bi bi-whatsapp" id="whatsapp"></i>
+    </a>
 
 <script src="/js/bootstrap.bundle.min.js"></script>
 

@@ -111,7 +111,6 @@
             <div class="gallery-wrapper">
                 <div class="gallery">
       
-
                 @foreach ($produtos as $produto )        
 
                     <a href="{{route('servicos.detalhes', $produto->id)}}" class="text-decoration-none"><img src="/storage/produtos/{{$produto->foto}}" alt="{{$produto->nome}}"
@@ -158,8 +157,6 @@
                 });
             });
         </script>
-
-
 
 
         {{-- <div class="container text-light">
